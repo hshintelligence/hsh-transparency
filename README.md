@@ -30,6 +30,16 @@ python3 verify_merkle_proof.py --proof proof.json --roots roots.jsonl
 
 That hash is published here so you can confirm the file you downloaded is the file we published. It is also in `SHA256SUMS`.
 
+## The full verification kit
+
+`verify_merkle_proof.py` above does check 3 — Merkle membership — and nothing else. `verify.py` in this repository is the **complete four-check kit**: file integrity, manifest integrity, Merkle membership and split disjointness.
+
+**Take it from here rather than from the copy inside your release.** The kit uploaded beside every release published before 2026-08-27 predates the `--roots` option, so it can only check a proof against a root we handed you in the same breath — which is the thing this repository exists to stop. Those copies are not being replaced: their `sha256` is recorded in the `MANIFEST.txt` beside them, and rewriting a file a manifest binds is indistinguishable from tampering. The current one lives here.
+
+    sha256(verify.py) = 7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05
+
+It is standard library only, except that check 4 reads Parquet and uses `pyarrow` if you have it — reporting NOT CHECKED if you do not. The other three checks never import it.
+
 ## THE TWO ALGORITHMS
 
 **Read this before computing anything.** Two algorithms appear in this log. They hash the same payload differently and produce completely different roots. Every entry in `ROOTS.jsonl` and every proof from the API carries an `algo` field, and that field — not the date, not an assumption — selects which of the two applies.
@@ -112,4 +122,4 @@ A day is only eligible for a root once it has closed. The current day will appea
 * **It does not cover records we never ingested.** A day with no root above is a day nothing was admitted, not a day something was hidden.
 * **The commits here are not cryptographically signed.** The timestamp is GitHub's, which is a third party, and that is the property this log needs. Signing would upgrade "GitHub says this date" to "HSH attested this date"; it is not in place yet and this sentence will be removed when it is.
 
-_Generated 2026-08-27T08:46:20.802027+00:00_
+_Generated 2026-08-27T11:10:20.087294+00:00_
