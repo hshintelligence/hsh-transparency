@@ -1,0 +1,115 @@
+# HSH Intelligence — Transparency Log
+
+Every daily Merkle root over the HSH Intelligence SEC EDGAR corpus.
+**Append-only. Public. Independent of us.**
+
+## What this is for
+
+A buyer holding one record from our corpus can prove it was in a given day's batch **without trusting us and without holding the rest of the data** — using roughly log2(n) hashes, or 13 for a day of 5,329 records.
+
+Vendors publish datasheets, which are claims. A Merkle root is a proof. If we altered any record after publication, the root would not match, and anyone holding a proof could see it.
+
+**And the root has to come from somewhere you trust more than us.** That is the whole reason this repository is public and separate from ours: each entry is timestamped by its git commit, a date recorded by GitHub rather than asserted by HSH. A root we hand you alongside the data proves nothing you did not already have to take on faith — you would be trusting us twice, once for the data and once for the number you check it against.
+
+## How to verify one record
+
+```
+# 1. the proof for your record, from our read API
+curl -s https://api.hshintelligence.com/v1/filings/<identity>/proof > proof.json
+
+# 2. the root for that day, from THIS repository — not from us
+curl -s https://raw.githubusercontent.com/hshintelligence/hsh-transparency/main/ROOTS.jsonl > roots.jsonl
+
+# 3. fold it yourself
+python3 verify_merkle_proof.py --proof proof.json --roots roots.jsonl
+```
+
+`verify_merkle_proof.py` is **standard library only** and imports nothing of ours. Read it in two minutes.
+
+    sha256(verify_merkle_proof.py) = 06aa983ea2fbb7344a8dc6a999a1e03f202cf2224f14a59d29afbcd2496bc568
+
+That hash is published here so you can confirm the file you downloaded is the file we published. It is also in `SHA256SUMS`.
+
+## THE TWO ALGORITHMS
+
+**Read this before computing anything.** Two algorithms appear in this log. They hash the same payload differently and produce completely different roots. Every entry in `ROOTS.jsonl` and every proof from the API carries an `algo` field, and that field — not the date, not an assumption — selects which of the two applies.
+
+### Both share the same leaf payload
+
+```
+payload = identity + NUL + content_hash + NUL + bronze_key
+```
+
+where NUL is a single 0x00 byte and the three fields are UTF-8. The leaf binds the record's IDENTITY, not only its content: hashing the payload alone would let a record be moved between days and still verify, against the wrong batch, which is exactly the tampering this exists to detect.
+
+### `sha256-carry-v1`
+
+```
+leaf(record)  = sha256(payload).hexdigest()
+join(a, b)    = sha256((a + b).encode('utf-8')).hexdigest()
+```
+
+* leaves are hashed with **no prefix**
+* interior nodes concatenate the **hex strings**, not the raw digests
+* the tree is built level by level, pairing left to right
+* **an odd node at any level is CARRIED to the next level, never duplicated.** Duplication is the classic Merkle forgery: it lets a different leaf set produce an identical root
+
+### `sha256-rfc6962-v2`
+
+RFC 6962 section 2.1, followed exactly.
+
+```
+leaf(record)  = sha256(b'\x00' + payload)
+join(a, b)    = sha256(b'\x01' + bytes.fromhex(a) + bytes.fromhex(b))
+```
+
+* leaves carry a **0x00** prefix, interior nodes a **0x01** prefix
+* concatenation is of **RAW BYTES**, not hex strings
+* the tree splits at the **largest power of two strictly below n**, recursively — it is not built level by level
+* **there is NO carry rule.** Do not carry an odd node; the split handles it
+
+### Which days use which
+
+| algorithm | days |
+|---|---|
+| `sha256-carry-v1` | 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-16, 2026-08-20, 2026-08-21 |
+| `sha256-rfc6962-v2` | 2026-08-22, 2026-08-25 |
+
+`tree_depth` in the table below counts levels **including the leaves**: 23 leaves is depth 6, 5,329 is depth 14. It is informational — the proof path length is what a verifier uses — and it is stated here so it is not one more thing to guess. For `sha256-rfc6962-v2` the tree is not built level by level and the figure is recorded as the recursion depth.
+
+The change was made on 2026-08-23. Roots published before it are `sha256-carry-v1` and are **not** re-computed under the new rule — a published root is never rewritten, so both algorithms remain load-bearing for as long as anyone holds a proof from that period.
+
+## Roots
+
+| Day | Records | Depth | Algorithm | Root |
+|---|---|---|---|---|
+| 2026-08-13 | 23 | 6 | `sha256-carry-v1` | `7cb336e73086977a2276958bd6ce5c85a235fea3c9edd6aecb0f54c916c325cd` |
+| 2026-08-14 | 5,329 | 14 | `sha256-carry-v1` | `ace5928cd7f2e6d80779739007e2dbb7c3504e1cb9de220dc0acc93db0b827a4` |
+| 2026-08-15 | 616 | 11 | `sha256-carry-v1` | `5f8738aad4a5a01f3a5d9bab03be3e71565e15cf54ae93f5c37e138e067eacd2` |
+| 2026-08-16 | 4,955 | 14 | `sha256-carry-v1` | `9e10c01aa1a447fbc22851b64a42fe78098c503ddf70962126b3cc58e2f67084` |
+| 2026-08-20 | 4,155 | 14 | `sha256-carry-v1` | `ce4b47a7d705b3b5c9e2e5ba81b2e7e0f02a94bae6ad114150537826b6effe74` |
+| 2026-08-21 | 33 | 7 | `sha256-carry-v1` | `82054e35dd2065fd6d29a624c82a3f0f937c64180242944400feef0c5fb6b939` |
+| 2026-08-22 | 429 | 10 | `sha256-rfc6962-v2` | `015bb9cb3540fa2befa9aa2826076c24cafdf808aba443b503ac2f60adff3bc3` |
+| 2026-08-25 | 154 | 9 | `sha256-rfc6962-v2` | `977aa8bb9b0cdaa6f9d3ba7d83d2c71d9983f695214727b118ebb9ed380cb6da` |
+
+## Days with no root
+
+Listed explicitly rather than omitted. A log with unexplained gaps reads as concealment; these are days the factory ingested nothing, measured against the register rather than left blank.
+
+| Day | Records ingested | Reason |
+|---|---|---|
+| 2026-08-17 | 0 | no records were ingested on this day |
+| 2026-08-18 | 0 | no records were ingested on this day |
+| 2026-08-19 | 0 | no records were ingested on this day |
+| 2026-08-23 | 0 | no records were ingested on this day |
+| 2026-08-24 | 0 | no records were ingested on this day |
+
+A day is only eligible for a root once it has closed. The current day will appear here after it does; a root published over a batch that can still grow would be wrong by the next record admitted.
+
+## What this log does NOT prove
+
+* **It does not prove a record is accurate.** It proves the record was in the batch we committed to on that day and has not changed since. What the filer wrote is a separate question, and our disclosures about it are in the state document that ships with each release.
+* **It does not cover records we never ingested.** A day with no root above is a day nothing was admitted, not a day something was hidden.
+* **The commits here are not cryptographically signed.** The timestamp is GitHub's, which is a third party, and that is the property this log needs. Signing would upgrade "GitHub says this date" to "HSH attested this date"; it is not in place yet and this sentence will be removed when it is.
+
+_Generated 2026-08-27T05:31:00.937539+00:00_
