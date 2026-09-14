@@ -83,7 +83,7 @@ join(a, b)    = sha256(b'\x01' + bytes.fromhex(a) + bytes.fromhex(b))
 | algorithm | days |
 |---|---|
 | `sha256-carry-v1` | 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-16, 2026-08-20, 2026-08-21 |
-| `sha256-rfc6962-v2` | 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-28, 2026-08-29, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-09, 2026-09-10, 2026-09-11 |
+| `sha256-rfc6962-v2` | 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-28, 2026-08-29, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-13 |
 
 `tree_depth` in the table below counts levels **including the leaves**: 23 leaves is depth 6, 5,329 is depth 14. It is informational — the proof path length is what a verifier uses — and it is stated here so it is not one more thing to guess. For `sha256-rfc6962-v2` the tree is not built level by level and the figure is recorded as the recursion depth.
 
@@ -114,6 +114,7 @@ The change was made on 2026-08-23. Roots published before it are `sha256-carry-v
 | 2026-09-09 | 1,869 | 12 | `sha256-rfc6962-v2` | `08cfb4c2a5c6c0e4a599845c3b1e6732244634e3ef5526fbdaa8bb4b27c7e300` |
 | 2026-09-10 | 1,578 | 12 | `sha256-rfc6962-v2` | `6173f1fd071d98ab4fdd700411e9b9e5a8237d5da17c27dde7f50feaed148a9e` |
 | 2026-09-11 | 1,731 | 12 | `sha256-rfc6962-v2` | `e5358b8b465ec02df93152aaf23dc37665a52bf8d31e96258284d85593839de1` |
+| 2026-09-13 | 24,767 | 16 | `sha256-rfc6962-v2` | `02f0bea22eedcce0240fbd3f187f67b26a56089da061de1cc3b76098bff46aa5` |
 
 ## Days with no root
 
@@ -130,6 +131,7 @@ Listed explicitly rather than omitted. A log with unexplained gaps reads as conc
 | 2026-08-30 | 0 | no records were ingested on this day |
 | 2026-08-31 | 0 | no records were ingested on this day |
 | 2026-09-08 | 0 | no records were ingested on this day |
+| 2026-09-12 | 0 | no records were ingested on this day |
 
 A day is only eligible for a root once it has closed. The current day will appear here after it does; a root published over a batch that can still grow would be wrong by the next record admitted.
 
@@ -139,4 +141,4 @@ A day is only eligible for a root once it has closed. The current day will appea
 * **It does not cover records we never ingested.** A day with no root above is a day nothing was admitted, not a day something was hidden.
 * **The commits here are not cryptographically signed.** The timestamp is GitHub's, which is a third party, and that is the property this log needs. Signing would upgrade "GitHub says this date" to "HSH attested this date"; it is not in place yet and this sentence will be removed when it is.
 
-_Generated 2026-09-13T21:49:58.039899+00:00_
+_Generated 2026-09-14T03:51:13.262381+00:00_
