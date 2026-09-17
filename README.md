@@ -36,7 +36,7 @@ That hash is published here so you can confirm the file you downloaded is the fi
 
 **Take it from here rather than from the copy inside your release.** The kit uploaded beside every release published before 2026-08-27 predates the `--roots` option, so it can only check a proof against a root we handed you in the same breath — which is the thing this repository exists to stop. Those copies are not being replaced: their `sha256` is recorded in the `MANIFEST.txt` beside them, and rewriting a file a manifest binds is indistinguishable from tampering. The current one lives here.
 
-    sha256(verify.py) = 7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05
+    sha256(verify.py) = 6822812647f717633201d7daf9671d0e8879edc470bd9cea2341bea11ae008d3
 
 It is standard library only, except that check 4 reads Parquet and uses `pyarrow` if you have it — reporting NOT CHECKED if you do not. The other three checks never import it.
 
@@ -144,4 +144,4 @@ A day is only eligible for a root once it has closed. The current day will appea
 * **It does not cover records we never ingested.** A day with no root above is a day nothing was admitted, not a day something was hidden.
 * **The commits here are not cryptographically signed.** The timestamp is GitHub's, which is a third party, and that is the property this log needs. Signing would upgrade "GitHub says this date" to "HSH attested this date"; it is not in place yet and this sentence will be removed when it is.
 
-_Generated 2026-09-17T15:48:50.720749+00:00_
+_Generated 2026-09-17T21:48:38.007810+00:00_

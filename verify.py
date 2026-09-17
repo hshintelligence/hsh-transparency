@@ -214,12 +214,44 @@ def check_merkle(proof, roots=None):
             "root we served you in the same file. That is not nothing, but "
             "it is not this check."]
     else:
+        # ══════════════════════════════════════════════════════════════
+        # LAW 1109 — THE VERDICT SAID PASS AND THE PROSE SAID OTHERWISE.
+        #
+        # Without --roots this took `published` from INSIDE THE PROOF —
+        # a number we served in the same file — folded the path to it,
+        # and returned True. The note beside it said plainly that this
+        # establishes only internal consistency; the VERDICT, the
+        # "All four checks passed" line and the EXIT CODE all said the
+        # check passed.
+        #
+        # The branch directly above does the right thing for a roots
+        # file that misses the day: it returns None, NOT CHECKED, and
+        # says "falling back to the root inside the proof would print
+        # PASS for a check that established only that we are internally
+        # consistent". The no-roots case is the same circularity and was
+        # the DEFAULT — the one a stranger hits running the documented
+        # command.
+        #
+        # The fold is still performed and still reported, because it is
+        # real evidence about the proof's internal shape. What it is not
+        # is this check.
+        # ══════════════════════════════════════════════════════════════
         published = proof.get("published_root") or ""
-        source = ("THE PROOF ITSELF — you did not supply --roots, so this "
-                  "check establishes that we are internally consistent and "
-                  "NOT that the root is one anybody else has seen. Fetch "
-                  "raw.githubusercontent.com/hshintelligence/hsh-transparency"
-                  "/main/ROOTS.jsonl and pass --roots to make it independent")
+        folded = (h == published) if published else None
+        return None, notes + [
+            "NOT CHECKED: you did not supply --roots, so there is no "
+            "independent root to compare against.",
+            f"    The proof's own path "
+            f"{'DOES' if folded else 'DOES NOT'} fold to the "
+            f"`published_root` recorded inside it "
+            f"({(published or '—')[:16]}…). That is worth knowing and it "
+            f"is not this check: both numbers came from us, in the same "
+            f"file, and a seller cannot vouch for a seller.",
+            "    Fetch the public log from a host that is not ours and "
+            "pass it:",
+            "    https://raw.githubusercontent.com/hshintelligence/"
+            "hsh-transparency/main/ROOTS.jsonl",
+            "    python3 verify.py … --proof <file> --roots ROOTS.jsonl"]
     if not proof.get("root_published") or not published:
         return None, notes + ["NO ROOT IS PUBLISHED FOR THIS DAY: this proof "
                               "cannot be checked and establishes nothing."]
@@ -268,8 +300,19 @@ def check_splits(d, meta):
                 overlaps.append(f"{a} and {b} share {len(both)} CIK(s): "
                                 f"{sorted(both)[:5]}")
     if meta.get("as_of"):
-        notes.append(f"as_of {meta['as_of']} — ask for this corpus again with "
-                     f"this watermark and you get these same bytes")
+        # WHAT THIS WATERMARK IS, AND WHAT IT IS NOT. It used to read "ask
+        # for this corpus again with this watermark and you get these same
+        # bytes". That is a promise about our source tables, which are
+        # corrected in place — a later rebuild at the same watermark can
+        # legitimately differ, and on some releases it does. The guarantee
+        # that holds is the one you can check here: the signed manifest
+        # binds the bytes, and check 1 is what proves you have them.
+        notes.append(f"as_of {meta['as_of']} — the watermark this corpus was "
+                     f"built at. It identifies the build. It is NOT a "
+                     f"promise that rebuilding at it returns these bytes: "
+                     f"our source tables are corrected in place. What binds "
+                     f"is the signed manifest, and check 1 proves the bytes "
+                     f"you hold are the bytes we published.")
     if len(seen) < 2:
         # Disjointness between fewer than two sets is not a property: passing
         # would mean "no overlap found because nothing was opened".
@@ -323,11 +366,18 @@ def main():
         print(f"{failed} CHECK(S) FAILED — do not use this data until resolved.")
     if skipped:
         print(f"{skipped} CHECK(S) COULD NOT RUN and established NOTHING. "
-              f"Supply what they need (see README) before concluding anything.")
+              f"Supply what they need (see README) before concluding "
+              f"anything. (exit code 2 — incomplete, not passed.)")
     if not failed and not skipped:
         print("All four checks passed. Read the README for what that does "
               "and does not establish.")
-    return 1 if failed else 0
+    # LAW 1109 — THE EXIT CODE IS READ BY A MACHINE THAT CANNOT READ THE
+    # NOTES. `return 1 if failed else 0` gave a buyer's CI a green build
+    # for a run in which a check established nothing. A skipped check is
+    # its own outcome and gets its own code: 1 FAILED, 2 INCOMPLETE.
+    if failed:
+        return 1
+    return 2 if skipped else 0
 
 
 if __name__ == "__main__":
