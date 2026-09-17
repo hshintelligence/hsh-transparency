@@ -83,7 +83,7 @@ join(a, b)    = sha256(b'\x01' + bytes.fromhex(a) + bytes.fromhex(b))
 | algorithm | days |
 |---|---|
 | `sha256-carry-v1` | 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-16, 2026-08-20, 2026-08-21 |
-| `sha256-rfc6962-v2` | 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-28, 2026-08-29, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-13, 2026-09-14, 2026-09-15 |
+| `sha256-rfc6962-v2` | 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-28, 2026-08-29, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-13, 2026-09-14, 2026-09-15, 2026-09-16 |
 
 `tree_depth` in the table below counts levels **including the leaves**: 23 leaves is depth 6, 5,329 is depth 14. It is informational — the proof path length is what a verifier uses — and it is stated here so it is not one more thing to guess. For `sha256-rfc6962-v2` the tree is not built level by level and the figure is recorded as the recursion depth.
 
@@ -117,6 +117,7 @@ The change was made on 2026-08-23. Roots published before it are `sha256-carry-v
 | 2026-09-13 | 24,767 | 16 | `sha256-rfc6962-v2` | `02f0bea22eedcce0240fbd3f187f67b26a56089da061de1cc3b76098bff46aa5` |
 | 2026-09-14 | 1,113 | 12 | `sha256-rfc6962-v2` | `c93e2149d1081b177ab2e6e8aa9c49a7e049c2d8f095f6087048c73fa85fab33` |
 | 2026-09-15 | 1,809 | 12 | `sha256-rfc6962-v2` | `ca9cc28bcd69b5e68f2defdb18aadcb9bade46263e3a9137a8b625d86cc75050` |
+| 2026-09-16 | 1,595 | 12 | `sha256-rfc6962-v2` | `e2d181c7ec4e278e1837e05c30b34d1353f4aa41dbde7a52c81ff40df86f4fb2` |
 
 ## Days with no root
 
@@ -143,4 +144,4 @@ A day is only eligible for a root once it has closed. The current day will appea
 * **It does not cover records we never ingested.** A day with no root above is a day nothing was admitted, not a day something was hidden.
 * **The commits here are not cryptographically signed.** The timestamp is GitHub's, which is a third party, and that is the property this log needs. Signing would upgrade "GitHub says this date" to "HSH attested this date"; it is not in place yet and this sentence will be removed when it is.
 
-_Generated 2026-09-16T21:51:52.335321+00:00_
+_Generated 2026-09-17T03:51:43.731848+00:00_
