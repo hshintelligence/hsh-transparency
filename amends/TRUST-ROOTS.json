@@ -1,0 +1,666 @@
+{
+ "live_releases": [
+  "hybrid_contexts-v1.5.0",
+  "insider_transactions-v1.0.0",
+  "restatements-v1.2.0",
+  "restatements-v1.3.0",
+  "restatements-v1.4.0",
+  "restatements-v1.5.0",
+  "sections-v1.4.0",
+  "table_facts-v1.7.0",
+  "taxonomy-v1.1.0",
+  "taxonomy-v1.2.0",
+  "taxonomy-v1.3.0"
+ ],
+ "releases": [
+  {
+   "file_hashes": {
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    }
+   },
+   "manifest_sha": "ede5a289e27a1a19ec080a3285802b60490f7629f7c9456c1c0cfb98fe53295a",
+   "product": "edgar_details_tables",
+   "records": 271887617,
+   "release_id": "edgar_details_tables-v1.0.0",
+   "released_at": "2026-09-10 15:44:41",
+   "retired": true,
+   "retired_at": "2026-09-11 07:11:02",
+   "retired_reason": "WITHDRAWN FOR DUPLICATE RECORDS, BEFORE ANY CUSTOMER HELD IT. MEASURED 2026-09-11: 4,306,782 of 271,887,617 records (1.584%) are duplicates. NO REPLACEMENT EXISTS YET \u2014 v1.0.1 is being rebuilt now and this row will be superseded when it publishes; claiming a supersession that does not exist would be the same kind of false statement this withdrawal corrects.",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    }
+   },
+   "manifest_sha": "9d99b810a681c83bf19d2d13e78aec39ffb2ba8286149719a0ae313f4cf4e142",
+   "product": "edgar_note_tables",
+   "records": 302770015,
+   "release_id": "edgar_note_tables-v1.0.0",
+   "released_at": "2026-09-10 21:00:05",
+   "retired": true,
+   "retired_at": "2026-09-11 07:11:02",
+   "retired_reason": "WITHDRAWN FOR DUPLICATE RECORDS, BEFORE ANY CUSTOMER HELD IT. MEASURED 2026-09-11: 4,192,143 of 302,770,015 records (1.385%) are duplicates. NO REPLACEMENT EXISTS YET \u2014 v1.0.1 is being rebuilt now and this row will be superseded when it publishes; claiming a supersession that does not exist would be the same kind of false statement this withdrawal corrects.",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "a405f1628cfca6aec65ad045ff0b50a9a0053ea04bea1b2b175b75a7846ad9a9",
+   "product": "hybrid_contexts",
+   "records": 579,
+   "release_id": "hybrid_contexts-v1.0.0",
+   "released_at": "2026-08-14 15:33:02",
+   "retired": true,
+   "retired_at": "2026-08-24 04:38:40",
+   "retired_reason": "23 of its 579 records (3.97%) FAIL the benchmark-contamination gate \u2014 82 findings against financebench, finqa-test, finqa-dev, convfinqa and tat-qa-test, tool ngram/2026-08-21T17:03:48Z. None of the 23 is present in hybrid_contexts-v1.4.0, so the successor is clean of them by construction.",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "c1a6e2379f8a6de2e945df5b7b3149396bcb8a053ef0b84b2da316f40b99c324",
+   "product": "hybrid_contexts",
+   "records": 151395,
+   "release_id": "hybrid_contexts-v1.1.0",
+   "released_at": "2026-08-22 10:15:46",
+   "retired": true,
+   "retired_at": "2026-08-23 17:03:53",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 150,816 context records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 3,293 records in this release that FAIL a quality gate \u2014 24 PII findings and the remainder benchmark contamination. Not withdrawn: th",
+   "version": "v1.1.0"
+  },
+  {
+   "file_hashes": {
+    "test": "996dd0c539cf6783e01a45dadff0d7a33f87f3c1b72e8b87d34694efad2e7ea3",
+    "train": "24d41f0e7c05f5a0c0aeaaec710ba2a18b3f927323475dd293b99ad872066c65",
+    "validation": "f9c8dc46d9308b7aa618aefd8fa98c16323c7200a5b6492b8ea1858bef6e660c"
+   },
+   "manifest_sha": "f916bae00d4810415f3f73219108a92924942f806a4ac8c10e6e0198de645426",
+   "product": "hybrid_contexts",
+   "records": 151395,
+   "release_id": "hybrid_contexts-v1.2.0",
+   "released_at": "2026-08-22 13:10:55",
+   "retired": true,
+   "retired_at": "2026-08-23 17:03:53",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 150,816 context records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 3,293 records in this release that FAIL a quality gate \u2014 24 PII findings and the remainder benchmark contamination. Not withdrawn: th",
+   "version": "v1.2.0"
+  },
+  {
+   "file_hashes": {
+    "test": "fce5ca97ae62e7da1bef66604c3ddcfe91a12bab5f7926806df21245d43924f2",
+    "train": "fde3641e107796bac84713082f8337fd7493d1aedf2b2416a40b0804826467ef",
+    "validation": "1c4b391d92cef6307fede11f7dab497544aaf8114589aa183bcb19c8d6ba08f5"
+   },
+   "manifest_sha": "435998ef392f52bc2129aa23c73d70cefba64aff2c57ec658b339b67f2346776",
+   "product": "hybrid_contexts",
+   "records": 151395,
+   "release_id": "hybrid_contexts-v1.3.0",
+   "released_at": "2026-08-22 16:05:24",
+   "retired": true,
+   "retired_at": "2026-08-23 17:03:53",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 150,816 context records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 3,293 records in this release that FAIL a quality gate \u2014 24 PII findings and the remainder benchmark contamination. Not withdrawn: th",
+   "version": "v1.3.0"
+  },
+  {
+   "file_hashes": {
+    "test": "8beb4e024025f3ddacaa4db5c2e9343fadb8902b761b7e871855d8938e554a67",
+    "train": "951d8f80ad6873ad5f07e7391b778a23f81506b0ba5bba777b57d2706e5c158b",
+    "validation": "17bf5adbf18886ca31b83e24aca9e93c5f29e6da6935dcead0a4892a1c1dd08a"
+   },
+   "manifest_sha": "a872f8b453155bb9b26cbbf6d465c703f4352e980a19047e01fb37e981e57ee5",
+   "product": "hybrid_contexts",
+   "records": 149220,
+   "release_id": "hybrid_contexts-v1.4.0",
+   "released_at": "2026-08-23 17:24:37",
+   "retired": true,
+   "retired_at": "2026-08-26 17:46:26",
+   "retired_reason": "SHIPPED A PLACEHOLDER DATE ON 100% OF ITS ROWS. All 149,220 records carry filed_at = 1970-01-01.",
+   "version": "v1.4.0"
+  },
+  {
+   "file_hashes": {
+    "test": "9a513822106be94126bf88775a0510efebfd7429c0472dad6054b1487feab305",
+    "train": "84db37d9374a6535e533654aaa802c257c7b35ba1590784d602957c31a8c5380",
+    "validation": "be197700996cd23346cbabef20133989f230d7466fd6103d3402b03c6fbade7d"
+   },
+   "manifest_sha": "f94e22efae18473cf05238acca1b9b111e9cf2d3dbb17564418a5998ab656f18",
+   "product": "hybrid_contexts",
+   "records": 149220,
+   "release_id": "hybrid_contexts-v1.5.0",
+   "released_at": "2026-08-26 08:54:54",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.5.0"
+  },
+  {
+   "file_hashes": {
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "fffc023f8b8f403e36c8ad0834d9c73ce9bf02bace6b2a617081ab39377a6e67",
+    "train": "a0f5970b9742eebc045ce868f27c898b778a423b030b615d1d45375f33e6f634",
+    "validation": "c30f0e6aa0d0da95b1cd6503d3cc965f3341f8a082671e6f1d41d55bed4ed660"
+   },
+   "manifest_sha": "7c0b8d14ff2d257a6b766f3955fbf217614435a7c62b94877d99eaded022ad66",
+   "product": "insider_transactions",
+   "records": 2053,
+   "release_id": "insider_transactions-v1.0.0",
+   "released_at": "2026-08-28 12:06:53",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "bf81438c9f536bd54738e5f9caecb2ece55463a626d8dbcc0b17ab79da4a6d32",
+   "product": "qa_pairs",
+   "records": 1382,
+   "release_id": "qa_pairs-v1.0.0",
+   "released_at": "2026-08-14 15:15:19",
+   "retired": true,
+   "retired_at": "2026-08-24 04:30:44",
+   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_context",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "bf81438c9f536bd54738e5f9caecb2ece55463a626d8dbcc0b17ab79da4a6d32",
+   "product": "qa_pairs",
+   "records": 1382,
+   "release_id": "qa_pairs-v1.1.0",
+   "released_at": "2026-08-22 10:19:44",
+   "retired": true,
+   "retired_at": "2026-08-24 04:30:45",
+   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_context",
+   "version": "v1.1.0"
+  },
+  {
+   "file_hashes": {
+    "test": "99b33df833a2543cba36e456d3953247d0e8b787d3ae70ed9795fb4298d6fffe",
+    "train": "25eeaa6a95ab8c974008b27f87be6fb467403825ae8ffeeaec7705cc2b2b88bd",
+    "validation": "79ea4a6a64f504108d1f8cc1490772c20df437cd6a3fb3fb72b1439cdc7ff92d"
+   },
+   "manifest_sha": "fcd21e8778adda8301dd6d2d088e95333e6ee29098f72e0b5e3b5be38d0d53bb",
+   "product": "qa_pairs",
+   "records": 1382,
+   "release_id": "qa_pairs-v1.2.0",
+   "released_at": "2026-08-22 13:09:01",
+   "retired": true,
+   "retired_at": "2026-08-24 04:30:45",
+   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_context",
+   "version": "v1.2.0"
+  },
+  {
+   "file_hashes": {
+    "test": "c91b956a6df07a76ca9a2c63c3a55052cb24ca43c483e2620e5d663c73931b4f",
+    "train": "25703503883f63c3a31e14dffcce35ebe6e075a6b7a45d78b93cac2e0ea2f3af",
+    "validation": "2203bebdb13c53e3e042750c468d0d05765337db76fa0cb138a36f1893e1d23f"
+   },
+   "manifest_sha": "f9970847e9941ecc2b0234641ead5cae2bea18fb6698d5c16ce7b00c2dea9b3d",
+   "product": "qa_pairs",
+   "records": 1382,
+   "release_id": "qa_pairs-v1.3.0",
+   "released_at": "2026-08-22 16:02:49",
+   "retired": true,
+   "retired_at": "2026-08-24 04:30:45",
+   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_context",
+   "version": "v1.3.0"
+  },
+  {
+   "file_hashes": {
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "2b3725c1746da88e8bb9dfdc6d92a001dd03c71d39b335efedc9e41033815ef0",
+    "train": "546ea22c40a886c6e4cbadd3558931a35dbcbb1f839325a9b1b31f744c28d4b2",
+    "validation": "163ccb4f18ab025d8dbe6c6e5e44320c1f7c79c9d4e2dfc911822ac7dabb7be5"
+   },
+   "manifest_sha": "69a12c743efea5e794de462eeb561e8f22e445061b1b88ad3aa344d4d1fae501",
+   "product": "restatements",
+   "records": 15353785,
+   "release_id": "restatements-v1.0.0",
+   "released_at": "2026-09-10 07:39:41",
+   "retired": true,
+   "retired_at": "2026-09-11 08:49:13",
+   "retired_reason": "WITHDRAWN AS WRONG, NOT CAVEATED. MEASURED 2026-09-11. No customer holds this release. Four defects, all fixed at the cause; v1.1.0 is rebuilt and verified but NOT YET PUBLISHED, so superseded_by is deliberately empty rather than naming a release that does not exist. This row will be superseded when v1.1.0 publishes.\\n\\nDEFECT 1 - THE ONE THAT MAKES IT WRONG RATHER THAN LIMITED. `is_latest` was co",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {
+    "__accuracy__": [
+     "# accuracy index:cik+form+period/10-K population=19923 n=300 confirmed=293 contradicted=0 inconclusive=7 precision=1.0000 ci=[0.9871,1.0000] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-11 18:18:02",
+     "# accuracy index:cik+form+period/10-Q population=18221 n=300 confirmed=294 contradicted=0 inconclusive=6 precision=1.0000 ci=[0.9871,1.0000] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-11 18:18:02"
+    ],
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "1bc5e6ca24c475bf0410e9da77e3681f43a575328348aa3abb9de6f869231275",
+    "train": "87b27c4e2daaeef7bd79b538d45f901d07df53db6a71a22d5a4692803bfa8884",
+    "validation": "333d97705c5c195a6ae48aba75846ee12f5db882346216fd37b1c7f412392f7c"
+   },
+   "manifest_sha": "ed8cb220a505d601c55db41b2a3ae052e559dcb7665facdb53fa87aad8fed618",
+   "product": "restatements",
+   "records": 15326990,
+   "release_id": "restatements-v1.1.0",
+   "released_at": "2026-09-11 18:18:06",
+   "retired": true,
+   "retired_at": "2026-09-12 12:06:59",
+   "retired_reason": "A PHANTOM RELEASE: LIVE IN THE LEDGER, WITH NOTHING PUBLISHED.",
+   "version": "v1.1.0"
+  },
+  {
+   "file_hashes": {
+    "__accuracy__": [
+     "# accuracy index:cik+form+period/10-K population=19923 n=300 confirmed=294 contradicted=1 inconclusive=5 precision=0.9966 ci=[0.9811,0.9994] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-12 09:04:23",
+     "# accuracy index:cik+form+period/10-Q population=18221 n=300 confirmed=295 contradicted=1 inconclusive=4 precision=0.9966 ci=[0.9811,0.9994] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-12 09:04:23"
+    ],
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "cae2d3b11d5255b0cf25e93486536cde81019830d0ae395fd0be9f23ea2ffdea",
+    "train": "210afad7ae3dd81de532dbdf2bc67079c3c644b3a01e744c17bb3ca169473611",
+    "validation": "8278b7d2449af8f98724780a716fea9f3cf5c5d47e3301449d9b6afdb529a68c"
+   },
+   "manifest_sha": "56003a1f266d1ad1082c50fc96c24248473141e0043bb2a21beb356962884990",
+   "product": "restatements",
+   "records": 15326990,
+   "release_id": "restatements-v1.2.0",
+   "released_at": "2026-09-12 09:06:17",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.2.0"
+  },
+  {
+   "file_hashes": {
+    "__accuracy__": [
+     "# accuracy index:cik+form+period/10-K population=19923 n=300 confirmed=290 contradicted=1 inconclusive=9 precision=0.9966 ci=[0.9808,0.9994] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-12 14:59:45",
+     "# accuracy index:cik+form+period/10-Q population=18221 n=300 confirmed=298 contradicted=0 inconclusive=2 precision=1.0000 ci=[0.9873,1.0000] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-12 14:59:45"
+    ],
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "fe57ff5e7b8faf0cc9d618aa3020e9c2a6a43b5a36783a9a946b4a26a8f18900",
+    "train": "b2eca2abdcea691cfc3d221ba9fac9408da0ea1d426052a082e520379ecb615e",
+    "validation": "2b92862bf4a726b1c2d1a0e055d2bc3797f275bea68ed895abe3dfb4c9e4ac13"
+   },
+   "manifest_sha": "58cdbe0b30b002b3032af5d6fbc6156867e93835ca73db74c7f8f052e2098b4f",
+   "product": "restatements",
+   "records": 15326990,
+   "release_id": "restatements-v1.3.0",
+   "released_at": "2026-09-12 15:01:39",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.3.0"
+  },
+  {
+   "file_hashes": {
+    "__accuracy__": [
+     "# accuracy index:cik+form+period/10-K population=19923 n=300 confirmed=295 contradicted=0 inconclusive=5 precision=1.0000 ci=[0.9871,1.0000] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-13 13:52:33",
+     "# accuracy index:cik+form+period/10-Q population=18221 n=300 confirmed=296 contradicted=0 inconclusive=4 precision=1.0000 ci=[0.9872,1.0000] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-13 13:52:33"
+    ],
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "bc638242791b3e78d1e233c967e7c3c724aa59c48ecab50853d009840daa5d8b",
+    "train": "7125d4fc33832286ba3a80875f531e9b8c63147a2b652004432a879145d54d28",
+    "validation": "077b6c197d581c361ccf5719aef313bea5fd9aa92e6ba10065411e96e35b89ec"
+   },
+   "manifest_sha": "d30a6644d127d8955bf091091d7c18a5579c259a1633b20b1b3cd981c6060a39",
+   "product": "restatements",
+   "records": 15326990,
+   "release_id": "restatements-v1.4.0",
+   "released_at": "2026-09-13 14:24:54",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.4.0"
+  },
+  {
+   "file_hashes": {
+    "__accuracy__": [
+     "# accuracy index:cik+form+period/10-K population=19923 mode=sampled n=300 ci=[0.9871,1.0000] confirmed=295 contradicted=0 inconclusive=5 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-16 11:09:57",
+     "# accuracy index:cik+form+period/10-KT population=72 mode=census enumerated=72/72 required_sample=73 interval=degenerate confirmed=65 contradicted=1 inconclusive=6 precision=0.9848 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-16 11:09:57",
+     "# accuracy index:cik+form+period/10-Q population=18221 mode=sampled n=300 ci=[0.9873,1.0000] confirmed=298 contradicted=0 inconclusive=2 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-16 11:09:57",
+     "# accuracy index:cik+form+period/10-QT population=9 mode=census enumerated=9/9 required_sample=73 interval=degenerate confirmed=8 contradicted=0 inconclusive=1 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-16 11:09:57",
+     "# accuracy index:cik+form+period/11-K population=241 mode=sampled n=233 ci=[0.9828,1.0000] confirmed=219 contradicted=0 inconclusive=14 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-16 11:09:57",
+     "# accuracy index:cik+form+period/20-F population=2192 mode=sampled n=300 ci=[0.9742,0.9980] confirmed=277 contradicted=2 inconclusive=21 precision=0.9928 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-16 11:09:57",
+     "# accuracy index:cik+form+period/40-F population=310 mode=sampled n=290 ci=[0.9866,1.0000] confirmed=282 contradicted=0 inconclusive=8 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-16 11:09:57"
+    ],
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "8846a84f08c897158b95ab7ce854ec174b059b51e8848790c9ad341746d05d4a",
+    "train": "cc8ccc75e33bc2a9c36c603ef2c75df2c40b7e60198ce232637f550a1fc2910e",
+    "validation": "c13e91d8d224ce7ddb12fe1b331cf07abb0de0dcf1dac5914375e8b83cb5b04c"
+   },
+   "manifest_sha": "75d7a8414f5896359f5ff3fe2a160825279ab3a06bb5803cbf6e3e14fbb1ba81",
+   "product": "restatements",
+   "records": 15326990,
+   "release_id": "restatements-v1.5.0",
+   "released_at": "2026-09-16 11:48:38",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.5.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "d03e7e19f2e11fcba1d1c2f9cb05b068a09f61352c6f72f46e3f6773f7a1274e",
+   "product": "sections",
+   "records": 65,
+   "release_id": "sections-v1.0.0",
+   "released_at": "2026-08-14 15:33:06",
+   "retired": true,
+   "retired_at": "2026-09-02 08:46:23",
+   "retired_reason": "UNREPRODUCIBLE: the ledger row carries as_of = 1970-01-01, so the build watermark was never recorded, and it cannot be recovered.",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "cf59e9333273d437e96393f150b9cd180c71759d84d8293a3fbfffca5d189e3f",
+   "product": "sections",
+   "records": 15035,
+   "release_id": "sections-v1.1.0",
+   "released_at": "2026-08-22 10:13:41",
+   "retired": true,
+   "retired_at": "2026-08-23 17:03:53",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 14,090 section records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 460 records in this release that FAIL a quality gate \u2014 47 PII findings and the remainder benchmark contamination. Not withdrawn: the a",
+   "version": "v1.1.0"
+  },
+  {
+   "file_hashes": {
+    "test": "535074dffd3bb24a83b15cb5b2667f1092fa8aaad0b6bb4367600adb82cd37df",
+    "train": "1ac7737d45056aa44409ade6d2d3def948d0905e97c9320acde1c3e1cfd10f89",
+    "validation": "8a8ab06f12dd937bdb7e18c20198ad560c93f12f0f1215d6ff1f5f5b5b50064b"
+   },
+   "manifest_sha": "a8f6f5fdb3cdb81cef5a0c3c152cca8a338f021b0028329b53a04c75ec4ac9b6",
+   "product": "sections",
+   "records": 15035,
+   "release_id": "sections-v1.2.0",
+   "released_at": "2026-08-22 13:09:34",
+   "retired": true,
+   "retired_at": "2026-08-23 17:03:53",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 14,090 section records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 460 records in this release that FAIL a quality gate \u2014 47 PII findings and the remainder benchmark contamination. Not withdrawn: the a",
+   "version": "v1.2.0"
+  },
+  {
+   "file_hashes": {
+    "test": "7a717f88e1732d16e3f49908e264d0e3d85d91dd3ee2a040182a6a149f781581",
+    "train": "d26801148ce1a2e940a3fec9fc709794dd836e7909446de48d868c35b186e7e8",
+    "validation": "31673161b9c54f1ab4a4d5081e5f327bf3b9fa105a575488e55061bdd138d021"
+   },
+   "manifest_sha": "2b9feda35295074c7517b9be674c7b0151b32bafda11b623577c882f4b450d7e",
+   "product": "sections",
+   "records": 15035,
+   "release_id": "sections-v1.3.0",
+   "released_at": "2026-08-22 16:03:38",
+   "retired": true,
+   "retired_at": "2026-08-23 17:03:53",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 14,090 section records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 460 records in this release that FAIL a quality gate \u2014 47 PII findings and the remainder benchmark contamination. Not withdrawn: the a",
+   "version": "v1.3.0"
+  },
+  {
+   "file_hashes": {
+    "test": "056e8196fbead6c582906b7a9109d73422524a8a093699eb9c0d1e56a8a4ef5b",
+    "train": "553939ce522921f4440a2914be81a69490c56101ce191444781eea8e40622c15",
+    "validation": "754f06e368413f20d8b1c6a343bdaecf308251bcc1a5aedd50090ee8b6b317eb"
+   },
+   "manifest_sha": "e81b31b270fe346e59df6403e9f094d5520c3c7cfad6ace7bcbd76e897aac9e6",
+   "product": "sections",
+   "records": 14685,
+   "release_id": "sections-v1.4.0",
+   "released_at": "2026-08-23 17:21:22",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.4.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "35f127cd3b23b23984a7130101482356a753a0d4b3ffa225639e981bbd0b6e83",
+   "product": "table_facts",
+   "records": 14505,
+   "release_id": "table_facts-v1.0.0",
+   "released_at": "2026-08-14 15:33:12",
+   "retired": true,
+   "retired_at": "2026-08-26 08:51:14",
+   "retired_reason": "438 of 14,505 rows (3.020%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload where the value should read a real unit. MEASURED 2026-08-26 by comparing every record_uid this release shares with the live table_facts-v1.4.0: 438 of 14,505 differ, and every one of them differs on the `unit` key alone \u2014 uref_1695913440 -> USD (347), uref_2104634341 -> Shares (53), uref_2040530268 -",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "a28792cc8135fb6fe8ec3afc1bdbd29a4d34554a45bd2ae99900c2e84b256c17",
+   "product": "table_facts",
+   "records": 4738072,
+   "release_id": "table_facts-v1.1.0",
+   "released_at": "2026-08-22 12:02:28",
+   "retired": true,
+   "retired_at": "2026-08-24 05:51:01",
+   "retired_reason": "113,342 of 4,738,072 rows (2.392%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload \u2014 `Unit12`, `Unit1`, `uref_1534111966` and 1,155 other opaque identifiers \u2014 where the value should read USD, Shares, Pure or USDPShares. A buyer filtering `unit = \\'USD\\'` silently loses those rows, and a buyer reading `unit` gets a token that means nothing outside one filing\\'s XBRL document.",
+   "version": "v1.1.0"
+  },
+  {
+   "file_hashes": {
+    "test": "1d0467ef28b1ff69bded2e881b811e2a5cb75c3fa21817cff9e74cd06839e590",
+    "train": "f47390746e4cd924eb442dbf9ac77bfd8680e28df04da59b67c2fd097919a2a6",
+    "validation": "3802988ad890d61a3c2baa687113a2c6960fdcf77fe2c6ed2ca67956c89e74c8"
+   },
+   "manifest_sha": "9785faea3bf50c4f7fa2f16a15325da929f5ee21846fd5b391a04534296897ca",
+   "product": "table_facts",
+   "records": 4738072,
+   "release_id": "table_facts-v1.2.0",
+   "released_at": "2026-08-22 13:26:47",
+   "retired": true,
+   "retired_at": "2026-08-24 05:51:02",
+   "retired_reason": "113,342 of 4,738,072 rows (2.392%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload \u2014 `Unit12`, `Unit1`, `uref_1534111966` and 1,155 other opaque identifiers \u2014 where the value should read USD, Shares, Pure or USDPShares. A buyer filtering `unit = \\'USD\\'` silently loses those rows, and a buyer reading `unit` gets a token that means nothing outside one filing\\'s XBRL document.",
+   "version": "v1.2.0"
+  },
+  {
+   "file_hashes": {
+    "test": "0790f08d529c5737c6b95f10842b4940c76ba8e530bb327a2d112b7c84cd6d71",
+    "train": "3a80f3597b893ea343a627ce188341b20e6b905a0bd46c06410e770d4fda3796",
+    "validation": "1a09efe3b2137ad9ecca67a68dc2c83c1ce52628519c7cce5af2c4989260fd71"
+   },
+   "manifest_sha": "a841fc066c666ed4d061170b0f231e2678817712bf10054f763237043bf72882",
+   "product": "table_facts",
+   "records": 4738072,
+   "release_id": "table_facts-v1.3.0",
+   "released_at": "2026-08-22 16:20:59",
+   "retired": true,
+   "retired_at": "2026-08-24 05:51:02",
+   "retired_reason": "113,342 of 4,738,072 rows (2.392%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload \u2014 `Unit12`, `Unit1`, `uref_1534111966` and 1,155 other opaque identifiers \u2014 where the value should read USD, Shares, Pure or USDPShares. A buyer filtering `unit = \\'USD\\'` silently loses those rows, and a buyer reading `unit` gets a token that means nothing outside one filing\\'s XBRL document.",
+   "version": "v1.3.0"
+  },
+  {
+   "file_hashes": {
+    "test": "318f38a2b203860faaf81c2fb483f43201a5578210f0296b75f8f3972d2dbb6c",
+    "train": "1ac9feb67018b7626375bf9053a8c68752e2f3587c8ec23d9dc0429ac38af2da",
+    "validation": "f4ec76c3a74f938da42aac6a5e819cdf99ccb197d267c139a1f2a8880a5f2a46"
+   },
+   "manifest_sha": "8991c65b71d570241c716b73ef2d74616e81265990abb5780606cf309ac7c524",
+   "product": "table_facts",
+   "records": 4769345,
+   "release_id": "table_facts-v1.4.0",
+   "released_at": "2026-08-24 04:50:30",
+   "retired": true,
+   "retired_at": "2026-08-27 20:16:56",
+   "retired_reason": "SHIPPED THE unitRef AS THE UNIT. The `unit` column carried the filer\\'s own document-local XBRL unitRef rather than the unit of measure, so a buyer filtering unit=\\'USD\\' on this release received 787,706 of 3,899,578 dollar-denominated rows \u2014 FOUR ROWS IN FIVE SILENTLY EXCLUDED. The bytes hold three spellings of one unit: usd 2,402,801, USD 787,706, U_USD 709,071, and 6,984 distinct unit strings e",
+   "version": "v1.4.0"
+  },
+  {
+   "file_hashes": {
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "645815543981f0675f2d1292563d3874751c7d8a55e26f4f2d05834f5a90c80e",
+    "train": "cac628ae774aba1307066fc4fb04b58536a5e076759963cda13dc1fac84d8b48",
+    "validation": "2775c0b445170b4d721bf1245a1abdd6ca03b128a531110722da128e700d3d18"
+   },
+   "manifest_sha": "036508b1cc43cdf645749ff5fb2a167c9478f94a0d2f473fb2b8896e20fba4a3",
+   "product": "table_facts",
+   "records": 4789416,
+   "release_id": "table_facts-v1.5.0",
+   "released_at": "2026-08-27 20:06:40",
+   "retired": true,
+   "retired_at": "2026-08-27 23:05:28",
+   "retired_reason": "SHIPPED A DOCUMENT-LOCAL IDENTIFIER AS THE UNIT ON 925 ROWS, and it is the SAME defect this version was published to fix.",
+   "version": "v1.5.0"
+  },
+  {
+   "file_hashes": {
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "b6ac8cf485011e9d31f206e4e1af716891f0e5380b121c8cd433430046bb6ecf",
+    "train": "cbe13603bb1f8ab0afbc6e8748957de2909ebd9f1d4fac3a5575448794ff9fb0",
+    "validation": "19bfcba429d9825a09381e8eec734d8daa5b5942fc25af655a513a1a3cf0ae83"
+   },
+   "manifest_sha": "ac00ec59a47250b3f90ec191092d9c0314c8b897d5473b522917d582f2897f20",
+   "product": "table_facts",
+   "records": 4789416,
+   "release_id": "table_facts-v1.6.0",
+   "released_at": "2026-08-27 23:04:49",
+   "retired": true,
+   "retired_at": "2026-08-28 05:00:10",
+   "retired_reason": "SHIPPED context_ref AS AN INERT POINTER. Every payload carried a `context_ref` \u2014 a document-local identifier \u2014 and nothing it referred to. An XBRL context carries a period AND the dimensional qualifiers saying which slice of the business a number describes; we extracted the period and discarded the qualifiers. So a consolidated figure and its own segment decomposition were the same concept, over t",
+   "version": "v1.6.0"
+  },
+  {
+   "file_hashes": {
+    "__kit__": {
+     "README.md": "8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63",
+     "verify.py": "7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05"
+    },
+    "test": "e33c1e47d4f54cf685bf7bdb7d3686b437c6216fd96e05e1265c4c959ee50031",
+    "train": "d9d70b2224f20c679b771c4b632e920289aaea928078f8f5dd2b224f6696ce8d",
+    "validation": "892753dcb4caef24f5b804aa40e30b84911324ebc5b3596902377464a3e307df"
+   },
+   "manifest_sha": "4d753e7a20a613b01d7c29d42c797abe804afb5e4e601a9b6f9f33f7a6a5c8ff",
+   "product": "table_facts",
+   "records": 4789416,
+   "release_id": "table_facts-v1.7.0",
+   "released_at": "2026-08-28 04:58:53",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.7.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "0872491961f025d835d31a5f1188f85a6b5704e373f57aaff3ec45485ab82cf1",
+   "product": "taxonomy",
+   "records": 14760,
+   "release_id": "taxonomy-v1.0.0",
+   "released_at": "2026-08-14 15:33:18",
+   "retired": true,
+   "retired_at": "2026-08-28 04:43:00",
+   "retired_reason": "CARRIES A LICENCE TAG WE KNOW IS WRONG. This release is tagged \\'public-domain-derived\\'. Its content is identical to taxonomy-v1.1.0, v1.2.0 and v1.3.0, all of which are correctly tagged \\'fasb-taxonomy-terms\\' \u2014 13,429 of its 14,760 rows (91.0%) carry a prose `definition` written by FASB, which is not a United States government work and is not public domain. The tag was found wrong, disclosed in",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "0872491961f025d835d31a5f1188f85a6b5704e373f57aaff3ec45485ab82cf1",
+   "product": "taxonomy",
+   "records": 14760,
+   "release_id": "taxonomy-v1.0.0",
+   "released_at": "2026-08-14 15:34:47",
+   "retired": true,
+   "retired_at": "2026-08-28 04:43:00",
+   "retired_reason": "CARRIES A LICENCE TAG WE KNOW IS WRONG. This release is tagged \\'public-domain-derived\\'. Its content is identical to taxonomy-v1.1.0, v1.2.0 and v1.3.0, all of which are correctly tagged \\'fasb-taxonomy-terms\\' \u2014 13,429 of its 14,760 rows (91.0%) carry a prose `definition` written by FASB, which is not a United States government work and is not public domain. The tag was found wrong, disclosed in",
+   "version": "v1.0.0"
+  },
+  {
+   "file_hashes": {},
+   "manifest_sha": "0872491961f025d835d31a5f1188f85a6b5704e373f57aaff3ec45485ab82cf1",
+   "product": "taxonomy",
+   "records": 14760,
+   "release_id": "taxonomy-v1.1.0",
+   "released_at": "2026-08-22 10:19:53",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.1.0"
+  },
+  {
+   "file_hashes": {
+    "reference": "7c2c62eed0b1c170b29f92a021a467620fa6f0eac4868c53e514f74c34696a0d"
+   },
+   "manifest_sha": "524ad461e1069b2473b41b7733bfc58bf54fa181972d7c6344fae0c2534d1e17",
+   "product": "taxonomy",
+   "records": 14760,
+   "release_id": "taxonomy-v1.2.0",
+   "released_at": "2026-08-22 13:08:44",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.2.0"
+  },
+  {
+   "file_hashes": {
+    "reference": "9e81f80a62288e32166a17cb1e2c9eaa0617e6081ab605d5ed962b4deafb949a"
+   },
+   "manifest_sha": "80c4f16992d5b036f3d8c12a2e6cf48115acf6edc09ba4f1357fae498dec7f6f",
+   "product": "taxonomy",
+   "records": 14760,
+   "release_id": "taxonomy-v1.3.0",
+   "released_at": "2026-08-22 16:01:39",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.3.0"
+  }
+ ],
+ "retired_releases": [
+  "edgar_details_tables-v1.0.0",
+  "edgar_note_tables-v1.0.0",
+  "hybrid_contexts-v1.0.0",
+  "hybrid_contexts-v1.1.0",
+  "hybrid_contexts-v1.2.0",
+  "hybrid_contexts-v1.3.0",
+  "hybrid_contexts-v1.4.0",
+  "qa_pairs-v1.0.0",
+  "qa_pairs-v1.1.0",
+  "qa_pairs-v1.2.0",
+  "qa_pairs-v1.3.0",
+  "restatements-v1.0.0",
+  "restatements-v1.1.0",
+  "sections-v1.0.0",
+  "sections-v1.1.0",
+  "sections-v1.2.0",
+  "sections-v1.3.0",
+  "table_facts-v1.0.0",
+  "table_facts-v1.1.0",
+  "table_facts-v1.2.0",
+  "table_facts-v1.3.0",
+  "table_facts-v1.4.0",
+  "table_facts-v1.5.0",
+  "table_facts-v1.6.0",
+  "taxonomy-v1.0.0"
+ ],
+ "signature_changelog": [
+  {
+   "at": "2026-09-12 11:25 UTC",
+   "event": "SUPERSEDED",
+   "reached_a_counterparty": "NO. Neither that version of this file nor its signature was ever distributed.",
+   "superseded_by": "The signature over the version recording restatements-v1.1.0 as retired, at 2026-09-12 12:06:59 UTC. The signature shipped beside this file is that one; any signature that does not verify against THIS file is superseded by definition.",
+   "what": "The first signature made with this key, over a version of this file that listed restatements-v1.1.0 as a live release with a manifest hash.",
+   "why_superseded": "That release was never published \u2014 no artefact existed under it. A reader could have anchored trust to a release that does not exist."
+  }
+ ],
+ "what_this_is": "The published record of every HSH Intelligence dataset release: what was published, what it hashes to, what was retired and why. Signed, and independent of whichever host served you the data."
+}
