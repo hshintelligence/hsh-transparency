@@ -40,6 +40,20 @@ That hash is published here so you can confirm the file you downloaded is the fi
 
 It is standard library only, except that check 4 reads Parquet and uses `pyarrow` if you have it — reporting NOT CHECKED if you do not. The other three checks never import it.
 
+## Also in this repository: `amends/`
+
+`amends/` is the **trust anchor for HSH Amends**, a commercial dataset published elsewhere. No bulk data lives there: it holds the public key, its fingerprint, the signed record of every release, and a byte-identical mirror of the evaluation sample that is published on a dataset host.
+
+**The mirror is the point.** The two copies cross-attest — same bytes, same `MANIFEST.txt`, same signature, on two hosts that would have to collude. If the dataset host served you an altered sample, it would not match what is committed here, and the difference between the two copies is itself the alarm.
+
+It is a separate guarantee and it does not touch the one above. The roots below are over the EDGAR corpus; `amends/` is about one released dataset and the key it is signed with. They share a repository for the reason either of them exists: the thing you check against should not come from whoever handed you the data.
+
+```
+amends/README.md      how to verify the key, a release and the sample
+amends/sample/        the mirror, with its manifest and signature
+amends/notebook/      a notebook that runs those checks in order
+```
+
 ## THE TWO ALGORITHMS
 
 **Read this before computing anything.** Two algorithms appear in this log. They hash the same payload differently and produce completely different roots. Every entry in `ROOTS.jsonl` and every proof from the API carries an `algo` field, and that field — not the date, not an assumption — selects which of the two applies.
@@ -105,11 +119,11 @@ The change was made on 2026-08-23. Roots published before it are `sha256-carry-v
 | 2026-08-28 | 216 | 9 | `sha256-rfc6962-v2` | `88fbd868e656e31f69ee17f337661d383cc4c6af31737832d07357964874710f` |
 | 2026-08-29 | 196 | 9 | `sha256-rfc6962-v2` | `18c0ff42dab9407cfe1799f2bb1efa8b3717f6a5863dfe62561055576296e3a6` |
 | 2026-09-01 | 199 | 9 | `sha256-rfc6962-v2` | `6fb0574e3b5257c9a21e3f652409f249e9829c8f7e21ed955291da0d160b4b1e` |
-| 2026-09-02 | 535,995 | 21 | `sha256-rfc6962-v2` | `3ca9a355f2e1b6917f49a37ddf9fb7e51ba3f5f635b44c3029736829ef7e57f1` |
+| 2026-09-02 | 478,810 | 20 | `sha256-rfc6962-v2` | `d23fd0d3b403469add042875fcf7531cb9b353ce35d02ce4605eba7c10b2ea7a` |
 | 2026-09-03 | 455,998 | 20 | `sha256-rfc6962-v2` | `2dbe81e240f4369d4ebc3f8479528fde05173248ec2e6c8855bac08700d7632e` |
 | 2026-09-04 | 574,738 | 21 | `sha256-rfc6962-v2` | `4913c23f68c10e337685665d56ca70afbe9220f4205f9395263002a4278f6d69` |
-| 2026-09-05 | 1,726,310 | 22 | `sha256-rfc6962-v2` | `14d039df6ffeda5e1d11ee993ec6e2d9a1067050bca07490fce9063882908afc` |
-| 2026-09-06 | 2,907,115 | 23 | `sha256-rfc6962-v2` | `d6fdcb6b4cc6b81d5b3edf98be3f296d0f74e8059ec8bde27dbb1ec6abd5a917` |
+| 2026-09-05 | 1,726,261 | 22 | `sha256-rfc6962-v2` | `c628c48c447dc12dc36b7096cdd3f47bd6145d799f84613666b705141153ebd6` |
+| 2026-09-06 | 2,907,114 | 23 | `sha256-rfc6962-v2` | `4bc95572668535331b2b0d361c88f91a6ce744800af5918abc83de2ddc0aad46` |
 | 2026-09-07 | 365,900 | 20 | `sha256-rfc6962-v2` | `639ad4b4cfa044879dad50fa7534655b21139aa8c3b7777750184abec67012cf` |
 | 2026-09-09 | 1,869 | 12 | `sha256-rfc6962-v2` | `08cfb4c2a5c6c0e4a599845c3b1e6732244634e3ef5526fbdaa8bb4b27c7e300` |
 | 2026-09-10 | 1,578 | 12 | `sha256-rfc6962-v2` | `6173f1fd071d98ab4fdd700411e9b9e5a8237d5da17c27dde7f50feaed148a9e` |
@@ -144,4 +158,4 @@ A day is only eligible for a root once it has closed. The current day will appea
 * **It does not cover records we never ingested.** A day with no root above is a day nothing was admitted, not a day something was hidden.
 * **The commits here are not cryptographically signed.** The timestamp is GitHub's, which is a third party, and that is the property this log needs. Signing would upgrade "GitHub says this date" to "HSH attested this date"; it is not in place yet and this sentence will be removed when it is.
 
-_Generated 2026-09-17T21:48:38.007810+00:00_
+_Generated 2026-09-18T06:24:58.210869+00:00_
