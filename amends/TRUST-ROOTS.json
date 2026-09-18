@@ -6,6 +6,7 @@
   "restatements-v1.3.0",
   "restatements-v1.4.0",
   "restatements-v1.5.0",
+  "restatements-v1.5.1",
   "sections-v1.4.0",
   "table_facts-v1.7.0",
   "taxonomy-v1.1.0",
@@ -232,6 +233,47 @@
    "version": "v1.0.0"
   },
   {
+   "accuracy_as_published": {
+    "audited_at": "2026-09-11 18:18:02",
+    "strata": {
+     "index:cik+form+period/10-K": {
+      "base_form": "10-K",
+      "ci_high": 1.0,
+      "ci_low": 0.9871,
+      "confirmed": 293,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 7,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 19923,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/10-Q": {
+      "base_form": "10-Q",
+      "ci_high": 1.0,
+      "ci_low": 0.9871,
+      "confirmed": 294,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 6,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 18221,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     }
+    },
+    "superseded_by": "restatements-v1.2.0",
+    "what_this_is": "The link-accuracy audit as it stood when restatements-v1.1.0 published, bound into its manifest and signed. It is a statement about this release at that moment and is never rewritten. It is NOT a current reading, and where a later release exists its figures supersede these."
+   },
    "file_hashes": {
     "__accuracy__": [
      "# accuracy index:cik+form+period/10-K population=19923 n=300 confirmed=293 contradicted=0 inconclusive=7 precision=1.0000 ci=[0.9871,1.0000] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-11 18:18:02",
@@ -256,6 +298,47 @@
    "version": "v1.1.0"
   },
   {
+   "accuracy_as_published": {
+    "audited_at": "2026-09-12 09:04:23",
+    "strata": {
+     "index:cik+form+period/10-K": {
+      "base_form": "10-K",
+      "ci_high": 0.9994,
+      "ci_low": 0.9811,
+      "confirmed": 294,
+      "contradicted": 1,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 5,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 19923,
+      "precision": 0.9966,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/10-Q": {
+      "base_form": "10-Q",
+      "ci_high": 0.9994,
+      "ci_low": 0.9811,
+      "confirmed": 295,
+      "contradicted": 1,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 4,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 18221,
+      "precision": 0.9966,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     }
+    },
+    "superseded_by": "restatements-v1.3.0",
+    "what_this_is": "The link-accuracy audit as it stood when restatements-v1.2.0 published, bound into its manifest and signed. It is a statement about this release at that moment and is never rewritten. It is NOT a current reading, and where a later release exists its figures supersede these."
+   },
    "file_hashes": {
     "__accuracy__": [
      "# accuracy index:cik+form+period/10-K population=19923 n=300 confirmed=294 contradicted=1 inconclusive=5 precision=0.9966 ci=[0.9811,0.9994] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-12 09:04:23",
@@ -280,6 +363,47 @@
    "version": "v1.2.0"
   },
   {
+   "accuracy_as_published": {
+    "audited_at": "2026-09-12 14:59:45",
+    "strata": {
+     "index:cik+form+period/10-K": {
+      "base_form": "10-K",
+      "ci_high": 0.9994,
+      "ci_low": 0.9808,
+      "confirmed": 290,
+      "contradicted": 1,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 9,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 19923,
+      "precision": 0.9966,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/10-Q": {
+      "base_form": "10-Q",
+      "ci_high": 1.0,
+      "ci_low": 0.9873,
+      "confirmed": 298,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 2,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 18221,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     }
+    },
+    "superseded_by": "restatements-v1.4.0",
+    "what_this_is": "The link-accuracy audit as it stood when restatements-v1.3.0 published, bound into its manifest and signed. It is a statement about this release at that moment and is never rewritten. It is NOT a current reading, and where a later release exists its figures supersede these."
+   },
    "file_hashes": {
     "__accuracy__": [
      "# accuracy index:cik+form+period/10-K population=19923 n=300 confirmed=290 contradicted=1 inconclusive=9 precision=0.9966 ci=[0.9808,0.9994] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-12 14:59:45",
@@ -304,6 +428,47 @@
    "version": "v1.3.0"
   },
   {
+   "accuracy_as_published": {
+    "audited_at": "2026-09-13 13:52:33",
+    "strata": {
+     "index:cik+form+period/10-K": {
+      "base_form": "10-K",
+      "ci_high": 1.0,
+      "ci_low": 0.9871,
+      "confirmed": 295,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 5,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 19923,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/10-Q": {
+      "base_form": "10-Q",
+      "ci_high": 1.0,
+      "ci_low": 0.9872,
+      "confirmed": 296,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 4,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 18221,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     }
+    },
+    "superseded_by": "restatements-v1.5.0",
+    "what_this_is": "The link-accuracy audit as it stood when restatements-v1.4.0 published, bound into its manifest and signed. It is a statement about this release at that moment and is never rewritten. It is NOT a current reading, and where a later release exists its figures supersede these."
+   },
    "file_hashes": {
     "__accuracy__": [
      "# accuracy index:cik+form+period/10-K population=19923 n=300 confirmed=295 contradicted=0 inconclusive=5 precision=1.0000 ci=[0.9871,1.0000] floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-13 13:52:33",
@@ -328,6 +493,128 @@
    "version": "v1.4.0"
   },
   {
+   "accuracy_as_published": {
+    "audited_at": "2026-09-16 11:09:57",
+    "strata": {
+     "index:cik+form+period/10-K": {
+      "base_form": "10-K",
+      "ci_high": 1.0,
+      "ci_low": 0.9871,
+      "confirmed": 295,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 5,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 19923,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/10-KT": {
+      "base_form": "10-KT",
+      "confirmed": 65,
+      "contradicted": 1,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 6,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 72,
+      "population": 72,
+      "precision": 0.9848,
+      "verdict": "SHIP",
+      "verification_mode": "census"
+     },
+     "index:cik+form+period/10-Q": {
+      "base_form": "10-Q",
+      "ci_high": 1.0,
+      "ci_low": 0.9873,
+      "confirmed": 298,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 2,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 18221,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/10-QT": {
+      "base_form": "10-QT",
+      "confirmed": 8,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 1,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 9,
+      "population": 9,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "census"
+     },
+     "index:cik+form+period/11-K": {
+      "base_form": "11-K",
+      "ci_high": 1.0,
+      "ci_low": 0.9828,
+      "confirmed": 219,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 14,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 233,
+      "population": 241,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/20-F": {
+      "base_form": "20-F",
+      "ci_high": 0.998,
+      "ci_low": 0.9742,
+      "confirmed": 277,
+      "contradicted": 2,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 21,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 2192,
+      "precision": 0.9928,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/40-F": {
+      "base_form": "40-F",
+      "ci_high": 1.0,
+      "ci_low": 0.9866,
+      "confirmed": 282,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 8,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 290,
+      "population": 310,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     }
+    },
+    "superseded_by": "restatements-v1.5.1",
+    "what_this_is": "The link-accuracy audit as it stood when restatements-v1.5.0 published, bound into its manifest and signed. It is a statement about this release at that moment and is never rewritten. It is NOT a current reading, and where a later release exists its figures supersede these."
+   },
    "file_hashes": {
     "__accuracy__": [
      "# accuracy index:cik+form+period/10-K population=19923 mode=sampled n=300 ci=[0.9871,1.0000] confirmed=295 contradicted=0 inconclusive=5 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-16 11:09:57",
@@ -355,6 +642,153 @@
    "retired_at": "",
    "retired_reason": "",
    "version": "v1.5.0"
+  },
+  {
+   "accuracy_as_published": {
+    "audited_at": "2026-09-17 15:37:49",
+    "strata": {
+     "index:cik+form+period/10-K": {
+      "base_form": "10-K",
+      "ci_high": 0.9982,
+      "ci_low": 0.9758,
+      "confirmed": 295,
+      "contradicted": 2,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 3,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 19582,
+      "precision": 0.9933,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/10-KT": {
+      "base_form": "10-KT",
+      "confirmed": 65,
+      "contradicted": 1,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 6,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 72,
+      "population": 72,
+      "precision": 0.9848,
+      "verdict": "SHIP",
+      "verification_mode": "census"
+     },
+     "index:cik+form+period/10-Q": {
+      "base_form": "10-Q",
+      "ci_high": 1.0,
+      "ci_low": 0.9871,
+      "confirmed": 295,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 5,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 18086,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/10-QT": {
+      "base_form": "10-QT",
+      "confirmed": 8,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 1,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 9,
+      "population": 9,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "census"
+     },
+     "index:cik+form+period/11-K": {
+      "base_form": "11-K",
+      "confirmed": 219,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 14,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 233,
+      "population": 233,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "census"
+     },
+     "index:cik+form+period/20-F": {
+      "base_form": "20-F",
+      "ci_high": 1.0,
+      "ci_low": 0.9864,
+      "confirmed": 279,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 21,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 300,
+      "population": 2112,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "sampled"
+     },
+     "index:cik+form+period/40-F": {
+      "base_form": "40-F",
+      "confirmed": 282,
+      "contradicted": 0,
+      "frame_reachable": null,
+      "frame_reachable_note": "this release's bound accuracy line records a population and no separately measured reachable frame, so none is published here. It is not a claim that the two are equal.",
+      "inconclusive": 8,
+      "instrument_version": "body-text-v1",
+      "link_basis": "index:cik+form+period",
+      "n_audited": 290,
+      "population": 290,
+      "precision": 1.0,
+      "verdict": "SHIP",
+      "verification_mode": "census"
+     }
+    },
+    "superseded_by": "",
+    "what_this_is": "The link-accuracy audit as it stood when restatements-v1.5.1 published, bound into its manifest and signed. It is a statement about this release at that moment and is never rewritten. It is NOT a current reading, and where a later release exists its figures supersede these."
+   },
+   "file_hashes": {
+    "__accuracy__": [
+     "# accuracy index:cik+form+period/10-K population=19582 mode=sampled n=300 ci=[0.9758,0.9982] confirmed=295 contradicted=2 inconclusive=3 precision=0.9933 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-17 15:37:49",
+     "# accuracy index:cik+form+period/10-KT population=72 mode=census enumerated=72/72 required_sample=73 interval=degenerate confirmed=65 contradicted=1 inconclusive=6 precision=0.9848 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-17 15:37:49",
+     "# accuracy index:cik+form+period/10-Q population=18086 mode=sampled n=300 ci=[0.9871,1.0000] confirmed=295 contradicted=0 inconclusive=5 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-17 15:37:49",
+     "# accuracy index:cik+form+period/10-QT population=9 mode=census enumerated=9/9 required_sample=73 interval=degenerate confirmed=8 contradicted=0 inconclusive=1 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-17 15:37:49",
+     "# accuracy index:cik+form+period/11-K population=233 mode=census enumerated=233/233 required_sample=73 interval=degenerate confirmed=219 contradicted=0 inconclusive=14 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-17 15:37:49",
+     "# accuracy index:cik+form+period/20-F population=2112 mode=sampled n=300 ci=[0.9864,1.0000] confirmed=279 contradicted=0 inconclusive=21 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-17 15:37:49",
+     "# accuracy index:cik+form+period/40-F population=290 mode=census enumerated=290/290 required_sample=73 interval=degenerate confirmed=282 contradicted=0 inconclusive=8 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-17 15:37:49"
+    ],
+    "__kit__": {
+     "README.md": "57f3a6ac97becf2e135f1a3293272bf3950eda2e46b53a90e5a2b6f62f752b3a",
+     "verify.py": "6822812647f717633201d7daf9671d0e8879edc470bd9cea2341bea11ae008d3"
+    },
+    "test": "be51fff6c7dd5577612db8e337f3f3667e215eaaaa51729ee4954d957a570809",
+    "train": "596b15c770ab5f90c6969f5f34c8dbeb25168cc81871cd1f437f0e73d9337330",
+    "validation": "be1716be011895cafd76c6c0241ae30392d1538beb8900813fba70d4b22386be"
+   },
+   "manifest_sha": "416d8205acd45fa22b35c2f8328880b0999dbf1312a727fcc9db3a4a53f7ee27",
+   "product": "restatements",
+   "records": 15326990,
+   "release_id": "restatements-v1.5.1",
+   "released_at": "2026-09-17 17:21:53",
+   "retired": false,
+   "retired_at": "",
+   "retired_reason": "",
+   "version": "v1.5.1"
   },
   {
    "file_hashes": {},
@@ -660,6 +1094,15 @@
    "superseded_by": "The signature over the version recording restatements-v1.1.0 as retired, at 2026-09-12 12:06:59 UTC. The signature shipped beside this file is that one; any signature that does not verify against THIS file is superseded by definition.",
    "what": "The first signature made with this key, over a version of this file that listed restatements-v1.1.0 as a live release with a manifest hash.",
    "why_superseded": "That release was never published \u2014 no artefact existed under it. A reader could have anchored trust to a release that does not exist."
+  },
+  {
+   "at": "2026-09-18 05:00 UTC",
+   "authorised_by": "Irfan Khan (owner), 2026-09-18, recorded in our authorisation ledger with scope restatements and an eight-hour expiry. Published artefacts are write-once by default; this is the documented exception, on the record rather than as a silent override.",
+   "event": "SUPERSEDED",
+   "reached_a_counterparty": "NO. No licensee held restatements-v1.5.1, nothing had been delivered and no listing was live. Cut 2026-09-17 17:21:53 UTC, corrected 2026-09-18, before any counterparty took delivery.",
+   "superseded_by": "verify.py sha256=6822812647f717633201d7daf9671d0e8879edc470bd9cea2341bea11ae008d3 and README.md sha256=57f3a6ac97becf2e135f1a3293272bf3950eda2e46b53a90e5a2b6f62f752b3a, which REFUSE instead of folding to the proof's own root. The manifest was re-bound and its digest moved from 5fce2d3f3c0c55e8983fa83753db33da862b2596755bf79876a9cfcf4a03b090 to the value this file records for the release. The published objects were replaced so that the ledger, the manifest, this anchor and the object store all state one binding.",
+   "what": "The verification-kit binding for restatements-v1.5.1. The manifest and this file bound verify.py sha256=7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05 and README.md sha256=8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63.",
+   "why_superseded": "In that verify.py, the documented Merkle command run WITHOUT --roots took the published root from inside the proof file it had been handed, folded the path to it, and returned True. The verdict line, the summary and the exit code all reported a pass for a check that had established only that we are internally consistent with ourselves. The branch directly above it already returned NOT CHECKED for a roots file missing the day, with a note saying that falling back to the proof's own root would be circular. The default path did not. A check that cannot fail is not a check."
   }
  ],
  "what_this_is": "The published record of every HSH Intelligence dataset release: what was published, what it hashes to, what was retired and why. Signed, and independent of whichever host served you the data."

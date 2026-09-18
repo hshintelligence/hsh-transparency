@@ -21,7 +21,7 @@ configs:
 
 # HSH Amends — evaluation sample
 
-**5,079 rows drawn from a 15,326,990-row commercial dataset.** Signed, and verifiable in about two minutes without contacting us.
+**5,645 rows drawn from a 15,326,990-row commercial dataset.** Signed, and verifiable in about two minutes without contacting us.
 
 > **This is a sample of a paid product.** It is published so a data team can evaluate the real thing — the real schema, the real values, the real verification chain — before any conversation about licensing. It is not open data and it is not a free tier. Licence terms are below.
 
@@ -31,7 +31,7 @@ configs:
 |---|---|
 | **Run the checks** | [Colab notebook](https://colab.research.google.com/github/hshintelligence/hsh-transparency/blob/main/amends/notebook/hsh-amends-verify-and-explore.ipynb) — verifies this sample against a second host, then explores it |
 | **Trust anchor** | [hshintelligence/hsh-transparency](https://github.com/hshintelligence/hsh-transparency/tree/main/amends) — the signing key, its fingerprint, and the signed record of every release |
-| **Documentation** | [Open the folder](https://drive.google.com/drive/folders/1c3qzgAFHef1lyTfRYQi5gpqIHXbCyhAn?usp=sharing) — the data dictionary, release history, schema stability note, datasheet and audit report, in one folder |
+| **Documentation** | [Open the folder](https://drive.google.com/drive/folders/1c3qzgAFHef1lyTfRYQi5gpqIHXbCyhAn?usp=sharing) — the datasheet, data dictionary, audit report, release history, schema stability note, product due diligence questionnaire, corrections policy, legal one-pager and errata & release history |
 | **Who we are** | [hshintelligence.com](https://hshintelligence.com) |
 | **Licensing** | [info@healingsunhaven.com](mailto:info@healingsunhaven.com) |
 
@@ -60,11 +60,12 @@ A precision figure with no denominator is a claim. One with its population, its 
 | Filings | 10,848,021 distinct accession numbers |
 | Companies | 742,056 distinct CIKs |
 | Date range | 2009-01-02 to 2026-08-28 |
-| Format | Apache Parquet, 3 part(s) |
+| Format | Apache Parquet, 3 parts |
 | Size | 1.2 GB |
-| Release | `restatements-v1.5.0` (as-of watermark 2026-09-16) |
-| Cadence | quarterly |
-| This sample | 5,079 rows, published free for evaluation |
+| Release | `restatements-v1.5.1` (as-of watermark 2026-09-17) |
+| Cadence, observed | **7 releases between 2026-09-10 and 2026-09-17** — 7 days |
+| Cadence, committed | Stated in the commercial terms, not here. This page reports what has been published; what will be published on what schedule is a contractual commitment and is made there. |
+| This sample | 5,645 rows, published free for evaluation |
 
 ## What the dataset is
 
@@ -78,17 +79,24 @@ An amendment index over SEC EDGAR at filing grain: one row per (filer, filing). 
 python3 verify_sample.py .
 ```
 
-Three checks, all byte-level and all identical to what applies to the full product:
+Six checks, and what each of them asks differs. Most compare the files you hold against what the signed manifest binds, and apply to the full product exactly as they do here. One is this directory's own seal, which the full product does not have. One compares the parquet's rows with the CSV's, because they are different files and only the first is what `load_dataset()` returns. And check 5 is the signing key against a host that did not serve you the sample:
 
 1. files against the manifest header
 2. every record's payload against its payload_sha
 3. the manifest signature
+4. SHA256SUMS against this directory, and its signature
+5. the key against the fingerprint the ANCHOR publishes
+6. the parquet's rows, which is what load_dataset() returns
 
 The key fingerprint is published in the [HSH transparency repository](https://github.com/hshintelligence/hsh-transparency/tree/main/amends) — a different host, append-only. Fetch the key from there rather than from here, and the two would have to collude to fool you. That is the whole design: **where you fetch from and where you anchor trust are different questions.**
 
 A Colab notebook does all of it in order — verification first, data second: [open the notebook](https://colab.research.google.com/github/hshintelligence/hsh-transparency/blob/main/amends/notebook/hsh-amends-verify-and-explore.ipynb).
 
-**The notebook is a convenience, and it is worth saying what that means.** It runs the same checks you would run by hand, but it is also the thing telling you they passed. A reader who wants certainty should run the four commands themselves — fetch from the dataset host, fetch the key from the anchor, compare the fingerprint, verify the signature — which is what `verify_sample.py` does. No arrangement of hosts fixes this: a notebook on a third host would still be the thing reporting its own result.
+**The notebook is a convenience, and it is worth saying what that means.** It runs the same checks you would run by hand, but it is also the thing telling you they passed. A reader who wants certainty runs them against the two hosts themselves.
+
+`verify_sample.py` does five of the six from the files alone — files against the manifest header; every record's payload against its payload_sha; the manifest signature; SHA256SUMS against this directory, and its signature; and the parquet's rows, which is what load_dataset() returns. The one it cannot do alone is check 5, the key against the fingerprint the ANCHOR publishes: the key shipped beside the sample and the manifest it signs came from the SAME host, so neither vouches for the other. Fetch `KEY-FINGERPRINT.txt` from the transparency repository and pass it — `--fingerprint KEY-FINGERPRINT.txt` — and the script checks it. Without it, check 5 prints NOT CHECKED rather than counting as a pass.
+
+What the script deliberately does NOT do is fetch anything. A tool that downloads both halves of a proof is one host telling you about itself again, which is the thing the second host exists to prevent. No arrangement of hosts fixes that for the notebook either: a notebook on a third host would still be the thing reporting its own result.
 
 What the two hosts DO protect is the data. If the dataset host served you an altered sample, the key and fingerprint published independently would not match it, and you would catch it. That is the claim, and it holds.
 
@@ -104,7 +112,7 @@ What the two hosts DO protect is the data. If the dataset host served you an alt
 | `split` | `VARCHAR` | Machine-learning split assignment: train, validation or test |
 | `payload` | `VARCHAR` | The amendment verdict for this filing, as a JSON object. Every analytical field lives here — see the payload table below |
 | `payload_sha` | `VARCHAR` | SHA-256 of the `payload` string exactly as shipped. The other half of the verification pair |
-| `tokens` | `BIGINT` | Token count of the payload, for sizing a language-model workload. Not a quality signal |
+| `tokens` | `BIGINT` | An estimate of the payload's size in language-model tokens… |
 | `cik` | `VARCHAR` | SEC's Central Index Key for the filer, unpadded |
 | `cik10` | `VARCHAR` | The same CIK zero-padded to ten characters — SEC's own conventional form |
 | `accession` | `VARCHAR` | SEC's accession number for the filing, canonical (digits only, no dashes). With `cik` it identifies a filing uniquely |
@@ -120,7 +128,7 @@ What the two hosts DO protect is the data. If the dataset host served you an alt
 
 `payload` is a JSON object holding the analytical fields — `link_state`, `amends_accession`, `link_basis`, `link_confidence`, `version_seq`, `is_latest`, `period` and the rest. The flat CSV in this package explodes them into columns as a convenience; the Parquet schema above is the product.
 
-**Full data dictionary — every column, every payload field, measured null rates and the caveats attached to each — is available on request with the licence terms.**
+**Full data dictionary — every column, every payload field, measured null rates and the caveats attached to each — is in the documentation folder linked under Quick links above, alongside the datasheet, the audit report and the release history. No request needed and no licence required to read it.**
 
 ## The audit, and why it is not a QA table
 
@@ -141,7 +149,7 @@ Two things make this different from a vendor's QA summary.
 
 **It ran against the shipped Parquet**, not against the tables the Parquet was built from. A check that passes on the source and is never re-run on the artefact says nothing about the file you receive.
 
-**Its verdict is bound into the hashed manifest.** The audit report is part of the release, so recomputing the manifest digest recomputes the accuracy claim along with the data. It is inside the thing being verified rather than beside it, which means it cannot be quietly revised after the fact without the signature failing.
+**What is bound by the signature, and what is not.** The manifest binds the data files, the verification kit and the per-stratum LINK-ACCURACY figures — those cannot be revised after the fact without the manifest's sha256 changing, and that sha256 is what the signed trust roots record — you can check the accuracy figures yourself in the manifest's own `# accuracy` lines. **The 8 quality checks above are NOT bound by it.** The audit report is a separate object and **no signature covers it**: the manifest digest does not, and neither do the release’s file hashes, which bind the three Parquet files, the accuracy lines and the verification kit and nothing else. It travels with a sha256 in the document index it ships beside, and that index is not signed. We would rather say which is which — and say plainly where there is nothing — than let one guarantee stand in for another.
 
 ## Usage
 
@@ -192,7 +200,7 @@ print(f'  period     {a.period}')
 print(f'  linked by  {a.basis}')
 ```
 
-**81 chains in this sample close inside it** — both the amendment and the filing it amends are present. That happens in `10-KT` and `10-QT`, which are drawn on base form alone, so the originals arrive with the amendments. Every other stratum draws the amendments only, so their targets sit in the full dataset rather than here. Wherever `link_state` is `linked`, the target exists.
+**65 amendment chains close inside this sample** (81 amendment rows resolve to an original that is also here; several amendments share an original, which is why the two numbers differ) — both the amendment and the filing it amends are present. That happens in `10-KT` and `10-QT`, which are drawn on base form alone, so the originals arrive with the amendments. Every other stratum draws the amendments only, so their targets sit in the full dataset rather than here. Wherever `link_state` is `linked`, the target exists.
 
 **Verify it.**
 
@@ -206,17 +214,21 @@ A subset establishes nothing about its superset. Coverage, denominators and reca
 
 You can therefore check our coverage claims without us handing over the data they describe.
 
-| stratum | population | frame reachable | precision | claim type |
-|---|---:|---:|---:|---|
-| `10-K` | 19,923 | 19,582 (98.29%) | **99.33%** | sampled — [97.58, 99.82] |
-| `10-Q` | 18,221 | 18,086 (99.26%) | **100.00%** | sampled — [98.71, 100.00] |
-| `20-F` | 2,192 | 2,112 (96.35%) | **100.00%** | sampled — [98.64, 100.00] |
-| `40-F` | 310 | 290 (93.55%) | **100.00%** | census — every member examined |
-| `11-K` | 241 | 233 (96.68%) | **100.00%** | census — every member examined |
-| `10-KT` | 72 | 72 (100.00%) | **98.48%** | census — every member examined |
-| `10-QT` | 9 | 9 (100.00%) | **100.00%** | census — every member examined |
+| stratum | population | frame reachable | examined | confirmed | contradicted | inconclusive | precision | claim type |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| `10-K` | 19,582 | *not stated* | 300 | 295 | 2 | 3 | **99.33%** | sampled — [97.58, 99.82] |
+| `10-KT` | 72 | *not stated* | 72 | 65 | 1 | 6 | **98.48%** | census — every member examined |
+| `10-Q` | 18,086 | *not stated* | 300 | 295 | 0 | 5 | **100.00%** | sampled — [98.71, 100.00] |
+| `10-QT` | 9 | *not stated* | 9 | 8 | 0 | 1 | **100.00%** | census — every member examined |
+| `11-K` | 233 | *not stated* | 233 | 219 | 0 | 14 | **100.00%** | census — every member examined |
+| `20-F` | 2,112 | *not stated* | 300 | 279 | 0 | 21 | **100.00%** | sampled — [98.64, 100.00] |
+| `40-F` | 290 | *not stated* | 290 | 282 | 0 | 8 | **100.00%** | census — every member examined |
 
-4 of these strata are reported as a **census**: every member examined, so there is no sampling risk and no interval is quoted. Quoting one would imply an inference nobody made.
+**`frame reachable` reads *not stated* for 7 of these strata.** This release's bound accuracy lines record a population and not a separately measured reachable frame, so we cannot tell you here how many of its rows hold a document the verifier can read. That is a gap in what this release bound — it is NOT a claim that population and reachable frame are the same number here. Releases cut after 2026-09-17 bind the frame on every line and this column reports it.
+
+**`inconclusive` is examined and undecided, and it is EXCLUDED from the precision denominator rather than counted against it.** Across these strata that is **58 of 1,504 records examined** (3.9%). A precision of 100% on a stratum with inconclusives means every record that COULD be decided was confirmed — not that every record was. The column is here so you can see the size of what was set aside.
+
+4 of these strata are reported as a **census**: every member examined, so there is no sampling risk and no interval is quoted. Quoting one would imply an inference nobody made. A census can still carry inconclusives: those members were examined and produced no verdict.
 
 ### What we withdrew
 
@@ -231,28 +243,43 @@ These are **historical readings**, and the date matters. They were measured befo
 
 ## What is in the sample, and how it was sized
 
-**5,079 rows** across **126 form types**, carrying **1,672 links in 1,570 distinct chains**.
+**5,645 rows** across **126 base forms** (**163 form types** once amendment suffixes are counted separately), carrying **1,654 links in 1,554 distinct chains**.
 
 The rule is: **stratified deterministic draw, census strata complete, every other stratum floored to a minimum evaluable mass, every link state represented.**
 
-**The unit is the chain within a stratum, not the row.** Your smallest natural filter is a stratum — *show me 40-F/A* — and a sample becomes a screenshot the moment that filter returns too few chains to judge. So each stratum is drawn to whichever is largest of its target, the N that yields 150 units, and the N at which **every year present in that stratum has appeared**. Ordering is `md5(record_uid)` throughout and the draw is only ever extended, never hand-picked, so anyone holding the release reproduces it exactly.
+**The unit is the chain within a stratum, not the row.** Your smallest natural filter is a stratum — *show me 40-F/A* — and a sample becomes a screenshot the moment that filter returns too few chains to judge. So each stratum is drawn to whichever is largest of its target, the N that yields 150 units, and the N at which **every year present in that stratum has appeared**. Ordering is `md5(record_uid)` throughout and the draw is only ever extended, never hand-picked.
 
-A uniform percentage would not do this. A 1% draw is ~153,000 rows carrying roughly 410 linked rows across 7 strata and 18 years — about 3.3 chains per stratum-year. 30 times the size of this sample and less evaluable, because a percentage is blind to where the information lives.
+**You can run that claim rather than take it.** `reproduce_sample.py` rebuilds this sample from the release and the published rules and tells you whether it got the same rows:
+
+    python3 reproduce_sample.py /path/to/release/parquet/
+
+It reports two verdicts, because they are different claims. **ROW SET** is the draw itself — it depends only on the release and the rules in `SAMPLE-COMPOSITION.json`, and a failure there means the sample is not what this page describes. **BYTE-EXACT** is the row set plus the CSV writer: matching our bytes also needs duckdb 1.5.1, which wrote them. Identical rows with different bytes is a quoting difference, not a data difference, and the script says which one you have.
+
+A uniform percentage would not do this. A 1% draw is ~153,000 rows carrying roughly 404 linked rows across the 7 AUDIT strata (a different cut from the 12 sample strata tabulated below) and 18 years — about 3.2 linked ROWS per stratum-year. (Rows, not chains: this release holds 1,654 links in 1,554 distinct chains in the sample, so the two are not interchangeable.) 27 times the size of this sample and less evaluable, because a percentage is blind to where the information lives.
 
 | stratum | rows | chains | years covered |
 |---|---:|---:|---:|
 | 10-KT (complete) | 459 | 56 | 18 of 18 |
 | 10-QT (complete) | 96 | 9 | 17 of 17 |
-| unverifiable_at_release (complete) | 4 | no links | 1 of 1 |
+| unverifiable_at_release (complete) | 588 | no links | 18 of 18 |
 | no_prior_filing_in_corpus | 689 | no links | 18 of 18 |
 | unresolved_prior_exists | 250 | no links | 18 of 18 |
 | 10-K linked | 350 | 350 | 18 of 18 |
 | 10-Q linked | 350 | 350 | 18 of 18 |
-| 20-F linked | 350 | 344 | 18 of 18 |
-| 40-F linked | 300 | 268 | 18 of 18 |
-| 11-K linked (complete) | 241 | 193 | 18 of 18 |
+| 20-F linked | 350 | 343 | 18 of 18 |
+| 40-F linked (complete) | 290 | 259 | 18 of 18 |
+| 11-K linked (complete) | 233 | 187 | 18 of 18 |
 | unknown_subject | 900 | no links | 18 of 18 |
 | not_an_amendment | 1,100 | no links | 18 of 18 |
+| **total drawn** | **5,655** | | |
+
+**That column sums to 5,655, and the sample is 5,645 rows.** The strata are not disjoint, and three different counts describe that — so each is named:
+
+- **474 rows in this sample satisfy more than one stratum rule.** The census strata are defined on base form and the state strata on link state, so a 10-KT row that is not an amendment satisfies both.
+- **10 of those were DRAWN into two strata**, which is the whole of the difference between the column total and the sample. The draws are unioned, so the sample holds each of them once. The rest satisfy a second rule whose own draw did not reach them.
+- The largest overlapping pair is **371 rows** that are both *10-KT, every row* and *not_an_amendment*.
+
+The per-stratum figures are the draw sizes, and changing them to make the column add up would break the reproduction above.
 
 Every stratum covers every year its population covers. That is the half of the rule a row count cannot show, so it is measured here rather than asserted.
 
@@ -260,16 +287,16 @@ It is **not a random sample** — rare states are over-represented on purpose, s
 
 | link_state | in sample | in the full dataset |
 |---|---:|---:|
-| `linked` | 1,672 | 40,968 |
+| `linked` | 1,654 | 40,384 |
 | `not_an_amendment` | 1,556 | 13,864,746 |
 | `unknown_subject` | 900 | 1,417,391 |
 | `no_prior_filing_in_corpus` | 695 | 1,273 |
+| `unverifiable_at_release` | 588 | 588 |
 | `unresolved_prior_exists` | 252 | 2,608 |
-| `unverifiable_at_release` | 4 | 4 |
 
-**4 strata are included complete** — every row of them: `10-KT`, `10-QT`, `unverifiable_at_release` and `11-K linked`. A sample of a complete stratum is a contradiction, so those are not sampled.
+**5 strata are included complete** — every row of them: `10-KT`, `10-QT`, `unverifiable_at_release`, `40-F linked` and `11-K linked`. A sample of a complete stratum is a contradiction, so those are not sampled.
 
-That is a different property from the **4 strata the coverage attestation reports as a census** (`40-F`, `11-K`, `10-KT` and `10-QT`), which says the AUDIT examined every reachable row of them. They are not the same list: `40-F` is a census in the audit and sampled here, at 300 of 310.
+That is a different property from the **4 strata the coverage attestation reports as a census** (`10-KT`, `10-QT`, `11-K` and `40-F`), which says the AUDIT examined every reachable row of them.
 
 ## Files
 
@@ -282,12 +309,14 @@ That is a different property from the **4 strata the coverage attestation report
 | `MANIFEST.txt.sig` | ed25519 signature over the manifest |
 | `COVERAGE-ATTESTATION.json` | the corpus-level claims, signed |
 | `HSH-SIGNING-KEY.pub` | the public key |
-| `verify_sample.py` | the three checks, stdlib only |
+| `verify_sample.py` | the six checks, stdlib only |
+| `SAMPLE-COMPOSITION.json` | every stratum's rule, target and draw size — the input to the reproducer |
+| `reproduce_sample.py` | rebuilds this sample from the release and checks it matches (needs duckdb) |
 
 ## Licence and terms
 
-This sample is provided for **evaluation**. It is not redistributable and confers no rights to the full dataset. The full product is licensed commercially under a Master Data Licence Agreement with a per-deal Order Form; pricing and terms are available on request.
+This sample is provided for **evaluation**. It is not redistributable and confers no rights to the full dataset. Commercial terms are agreed in writing before any delivery and are available from info@healingsunhaven.com. No pricing sheet, licence agreement or order form is cited here because none has been registered with this build — we name only what we can send you today.
 
 **Contact:** info@healingsunhaven.com
 
-*Sample of `restatements-v1.5.0`, as-of watermark 2026-09-16 10:01:40. Generated 2026-09-17T14:01:48Z.*
+*Sample of `restatements-v1.5.1`, as-of watermark 2026-09-17 15:29:36. Generated 2026-09-18T09:40:29Z.*

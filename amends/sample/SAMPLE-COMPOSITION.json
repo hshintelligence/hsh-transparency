@@ -1,6 +1,6 @@
 {
   "release_rows": 15326990,
-  "sample_rows": 5079,
+  "sample_rows": 5645,
   "strata": [
     {
       "stratum": "census: 10-KT, every row",
@@ -43,11 +43,11 @@
       "n_for_floor": null,
       "n_for_year_range": null,
       "binding": [],
-      "in_release": 4,
-      "in_sample": 4,
+      "in_release": 588,
+      "in_sample": 588,
       "chains_in_sample": 0,
-      "years_in_sample": 1,
-      "years_in_release": 1,
+      "years_in_sample": 18,
+      "years_in_release": 18,
       "complete": true
     },
     {
@@ -91,9 +91,9 @@
       "target": 350,
       "floor_units": 150,
       "n_for_floor": 150,
-      "n_for_year_range": 57,
+      "n_for_year_range": 56,
       "binding": [],
-      "in_release": 19923,
+      "in_release": 19582,
       "in_sample": 350,
       "chains_in_sample": 350,
       "years_in_sample": 18,
@@ -107,9 +107,9 @@
       "target": 350,
       "floor_units": 150,
       "n_for_floor": 150,
-      "n_for_year_range": 147,
+      "n_for_year_range": 146,
       "binding": [],
-      "in_release": 18221,
+      "in_release": 18086,
       "in_sample": 350,
       "chains_in_sample": 350,
       "years_in_sample": 18,
@@ -123,11 +123,11 @@
       "target": 350,
       "floor_units": 150,
       "n_for_floor": 151,
-      "n_for_year_range": 64,
+      "n_for_year_range": 63,
       "binding": [],
-      "in_release": 2192,
+      "in_release": 2112,
       "in_sample": 350,
-      "chains_in_sample": 344,
+      "chains_in_sample": 343,
       "years_in_sample": 18,
       "years_in_release": 18,
       "complete": false
@@ -138,15 +138,15 @@
       "unit": "chain",
       "target": 300,
       "floor_units": 150,
-      "n_for_floor": 158,
-      "n_for_year_range": 82,
+      "n_for_floor": 159,
+      "n_for_year_range": 79,
       "binding": [],
-      "in_release": 310,
-      "in_sample": 300,
-      "chains_in_sample": 268,
+      "in_release": 290,
+      "in_sample": 290,
+      "chains_in_sample": 259,
       "years_in_sample": 18,
       "years_in_release": 18,
-      "complete": false
+      "complete": true
     },
     {
       "stratum": "stratum: 11-K linked",
@@ -155,11 +155,11 @@
       "target": 241,
       "floor_units": 150,
       "n_for_floor": 180,
-      "n_for_year_range": 86,
+      "n_for_year_range": 84,
       "binding": [],
-      "in_release": 241,
-      "in_sample": 241,
-      "chains_in_sample": 193,
+      "in_release": 233,
+      "in_sample": 233,
+      "chains_in_sample": 187,
       "years_in_sample": 18,
       "years_in_release": 18,
       "complete": true
@@ -198,16 +198,17 @@
     }
   ],
   "by_state": {
-    "linked": 1672,
+    "linked": 1654,
     "not_an_amendment": 1556,
     "unknown_subject": 900,
     "no_prior_filing_in_corpus": 695,
-    "unresolved_prior_exists": 252,
-    "unverifiable_at_release": 4
+    "unverifiable_at_release": 588,
+    "unresolved_prior_exists": 252
   },
   "base_forms": 126,
-  "sample_links": 1672,
-  "sample_chains": 1570,
+  "form_types": 163,
+  "sample_links": 1654,
+  "sample_chains": 1554,
   "col_types": {
     "record_uid": "VARCHAR",
     "release_id": "VARCHAR",
@@ -229,7 +230,43 @@
     "jurisdiction": "VARCHAR",
     "quality_flags": "VARCHAR[]"
   },
-  "chains_resolvable_in_sample": 81,
+  "rows_drawn_across_strata": 5655,
+  "rows_in_more_than_one_stratum": 474,
+  "double_counted_in_the_stratum_column": 10,
+  "overlapping_stratum_pairs": [
+    {
+      "a": "census: 10-KT, every row",
+      "b": "state: unverifiable_at_release, every row",
+      "rows": 4
+    },
+    {
+      "a": "census: 10-KT, every row",
+      "b": "state: no_prior_filing_in_corpus",
+      "rows": 10
+    },
+    {
+      "a": "census: 10-KT, every row",
+      "b": "state: unresolved_prior_exists",
+      "rows": 2
+    },
+    {
+      "a": "census: 10-KT, every row",
+      "b": "state: not_an_amendment",
+      "rows": 371
+    },
+    {
+      "a": "census: 10-QT, every row",
+      "b": "state: no_prior_filing_in_corpus",
+      "rows": 2
+    },
+    {
+      "a": "census: 10-QT, every row",
+      "b": "state: not_an_amendment",
+      "rows": 85
+    }
+  ],
+  "rows_resolvable_in_sample": 81,
+  "chains_resolvable_in_sample": 65,
   "closing_forms": [
     "10-KT",
     "10-QT"
