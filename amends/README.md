@@ -22,11 +22,15 @@ append-only, public, and not the host that served you the data.
 The sample is published on a dataset host for reach. It is mirrored here so
 the two **cross-attest**: same bytes, same `MANIFEST.txt`, same signature.
 If a host changes its terms, goes away, or serves you something altered,
-the proof and the sample both survive in Git — and a mismatch between the
-two copies is itself the alarm.
+this copy and the proof beside it do not change with it — and a mismatch
+between the two copies is itself the alarm.
 
-This repository is append-only and independent of whatever served you the
-data. That is the only property a trust anchor actually needs.
+This repository is public, is independent of whatever served you the data,
+and keeps a Git history anyone can inspect. It is NOT append-only by
+enforcement: the account is ours and we could rewrite or remove it. Clone
+it when you take delivery. What a rewrite cannot reach is the copy in your
+hands, and that is the property a trust anchor actually needs — not our
+good behaviour, but your ability to check without us.
 
 One consequence, stated so it is not mistaken for a choice: the mirror
 carries the sample's dataset card verbatim, licence paragraph and all,
@@ -79,3 +83,7 @@ The datasheet, data dictionary, audit report, release history, schema stability 
 What the script deliberately does NOT do is fetch anything. A tool that downloads both halves of a proof is one host telling you about itself again, which is the thing the second host exists to prevent. No arrangement of hosts fixes that for the notebook either: a notebook on a third host would still be the thing reporting its own result.
 
 What the two hosts DO protect is the data. If the dataset host served you an altered sample, the key and fingerprint published independently would not match it, and you would catch it. That is the claim, and it holds.
+
+---
+
+© 2026 Healing Sun Haven LLC

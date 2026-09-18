@@ -7,7 +7,7 @@
   "released_at": "2026-09-17 17:21:53",
   "records": 15326990,
   "companies": 742056,
-  "manifest_sha": "416d8205acd45fa22b35c2f8328880b0999dbf1312a727fcc9db3a4a53f7ee27",
+  "manifest_sha": "6106d5151ffc824a6a59ee21e1b9532de6cb2efc90c68a2dfc5ff623ec8f3e87",
   "licence": "public-domain-derived",
   "instrument_version": "body-text-v1",
   "audited_at": "2026-09-17 15:37:49",
@@ -238,7 +238,7 @@
     "key_fingerprint_sha256": "e423f1714f11200592c98939233fde02aaf30ef8946f1c796f484d4c124c6ee8",
     "key_fingerprint_is_published_at": "the HSH transparency repository, which is append-only and independent of whichever host served you this file"
   },
-  "generated_at": "2026-09-18T09:40:29Z",
+  "generated_at": "2026-09-18T17:44:54Z",
   "_state_pop": {
     "not_an_amendment": "13,864,746",
     "unknown_subject": "1,417,391",

@@ -759,7 +759,7 @@
       "verification_mode": "census"
      }
     },
-    "superseded_by": "",
+    "superseded_by": "HSH Intelligence",
     "what_this_is": "The link-accuracy audit as it stood when restatements-v1.5.1 published, bound into its manifest and signed. It is a statement about this release at that moment and is never rewritten. It is NOT a current reading, and where a later release exists its figures supersede these."
    },
    "file_hashes": {
@@ -773,14 +773,14 @@
      "# accuracy index:cik+form+period/40-F population=290 mode=census enumerated=290/290 required_sample=73 interval=degenerate confirmed=282 contradicted=0 inconclusive=8 precision=1.0000 floor=0.95 verdict=SHIP instrument=body-text-v1 audited=2026-09-17 15:37:49"
     ],
     "__kit__": {
-     "README.md": "57f3a6ac97becf2e135f1a3293272bf3950eda2e46b53a90e5a2b6f62f752b3a",
+     "README.md": "1537931b396455a785260949a5c3be6810c1881c371cfe6d4d9b08b29ede882b",
      "verify.py": "6822812647f717633201d7daf9671d0e8879edc470bd9cea2341bea11ae008d3"
     },
     "test": "be51fff6c7dd5577612db8e337f3f3667e215eaaaa51729ee4954d957a570809",
     "train": "596b15c770ab5f90c6969f5f34c8dbeb25168cc81871cd1f437f0e73d9337330",
     "validation": "be1716be011895cafd76c6c0241ae30392d1538beb8900813fba70d4b22386be"
    },
-   "manifest_sha": "416d8205acd45fa22b35c2f8328880b0999dbf1312a727fcc9db3a4a53f7ee27",
+   "manifest_sha": "6106d5151ffc824a6a59ee21e1b9532de6cb2efc90c68a2dfc5ff623ec8f3e87",
    "product": "restatements",
    "records": 15326990,
    "release_id": "restatements-v1.5.1",
@@ -1097,12 +1097,30 @@
   },
   {
    "at": "2026-09-18 05:00 UTC",
-   "authorised_by": "Irfan Khan (owner), 2026-09-18, recorded in our authorisation ledger with scope restatements and an eight-hour expiry. Published artefacts are write-once by default; this is the documented exception, on the record rather than as a silent override.",
+   "authorised_by": "HSH Intelligence, 2026-09-18, recorded in our authorisation ledger with scope restatements and an eight-hour expiry. Published artefacts are write-once by default; this is the documented exception, on the record rather than as a silent override.",
    "event": "SUPERSEDED",
    "reached_a_counterparty": "NO. No licensee held restatements-v1.5.1, nothing had been delivered and no listing was live. Cut 2026-09-17 17:21:53 UTC, corrected 2026-09-18, before any counterparty took delivery.",
    "superseded_by": "verify.py sha256=6822812647f717633201d7daf9671d0e8879edc470bd9cea2341bea11ae008d3 and README.md sha256=57f3a6ac97becf2e135f1a3293272bf3950eda2e46b53a90e5a2b6f62f752b3a, which REFUSE instead of folding to the proof's own root. The manifest was re-bound and its digest moved from 5fce2d3f3c0c55e8983fa83753db33da862b2596755bf79876a9cfcf4a03b090 to the value this file records for the release. The published objects were replaced so that the ledger, the manifest, this anchor and the object store all state one binding.",
    "what": "The verification-kit binding for restatements-v1.5.1. The manifest and this file bound verify.py sha256=7f138e812c78b328ae21046493546d73e085ee0fd6183b2ed338fd8e6ab0db05 and README.md sha256=8b8044329f014ecdd7b12c9e95a6345f68c352b6ac6cd069961d68e580fc8d63.",
    "why_superseded": "In that verify.py, the documented Merkle command run WITHOUT --roots took the published root from inside the proof file it had been handed, folded the path to it, and returned True. The verdict line, the summary and the exit code all reported a pass for a check that had established only that we are internally consistent with ourselves. The branch directly above it already returned NOT CHECKED for a roots file missing the day, with a note saying that falling back to the proof's own root would be circular. The default path did not. A check that cannot fail is not a check."
+  },
+  {
+   "at": "2026-09-18 17:30 UTC",
+   "authorised_by": "HSH Intelligence, 2026-09-18, recorded in our authorisation ledger with scope restatements and an eight-hour expiry. Published artefacts are write-once by default; this is the documented exception, on the record rather than as a silent override.",
+   "event": "SUPERSEDED",
+   "reached_a_counterparty": "NO. No licensee holds restatements-v1.5.1, nothing has been delivered and no listing is live. This is a correction before first delivery rather than an erratum against a release somebody holds.",
+   "superseded_by": "README.md sha256=1537931b396455a785260949a5c3be6810c1881c371cfe6d4d9b08b29ede882b. verify.py is unchanged at sha256=6822812647f717633201d7daf9671d0e8879edc470bd9cea2341bea11ae008d3. The manifest is re-bound and its digest moves; the ledger, the manifest, this anchor and the object store are brought to one binding, as they were the first time.",
+   "what": "The verification-kit README binding for restatements-v1.5.1. The manifest and this file bind README.md sha256=57f3a6ac97becf2e135f1a3293272bf3950eda2e46b53a90e5a2b6f62f752b3a, under manifest_sha=416d8205acd45fa22b35c2f8328880b0999dbf1312a727fcc9db3a4a53f7ee27.",
+   "why_superseded": "That README ships with EVERY delivery of EVERY product, and it named five other products by id and version \u2014 a list of releases that cannot be checked with it \u2014 and used another product's release id as its copy-paste example, so a buyer of this release running the documented command queried a release they do not hold. The limits it states are real and are kept; what is removed is the catalogue and the wrong example. A reader outside this company cannot act on which OTHER products lack a file hash."
+  },
+  {
+   "at": "2026-09-18 17:30 UTC",
+   "authorised_by": "HSH Intelligence, 2026-09-18.",
+   "event": "ATTRIBUTION CORRECTED",
+   "reached_a_counterparty": "YES, AND THIS IS MEASURED RATHER THAN ASSUMED. Fetched anonymously from the public host on 2026-09-18 at 17:31 UTC: HTTP 200, 57,089 bytes, the name present at .signature_changelog[1].authorised_by. It is in a Git repository, so it is also in the history of any clone taken before now. That is why this is a SUPERSEDING ENTRY and not a quiet replacement: anyone holding the earlier copy can see why the current one differs. No licensee holds restatements-v1.5.1 and no data has been delivered; what was exposed is a name, not a buyer's artefact.",
+   "superseded_by": "HSH Intelligence, for that authorisation and every authorisation. The published copy of this file now renders company attribution in every `authorised_by`, `retracted_by` and `corrected_by` field; the internal record keeps whatever the ledger holds. A control refuses the build if a personal name reaches a published artefact.",
+   "what": "The 2026-09-18 05:00 entry above records its authorisation in the name of an individual. That name was published: this file goes to a public repository, and it carried a personal name in an `authorised_by` field.",
+   "why_superseded": "An exception to a write-once rule is the COMPANY's act, not an individual's \u2014 the same rule that makes a published correction the company's act rather than a tool's or a person's. The authorising party was and is HSH Intelligence. Naming a person was a misattribution of a corporate decision, and it put a personal name into an artefact published on a public host, where it serves no reader and cannot be withdrawn once cloned."
   }
  ],
  "what_this_is": "The published record of every HSH Intelligence dataset release: what was published, what it hashes to, what was retired and why. Signed, and independent of whichever host served you the data."

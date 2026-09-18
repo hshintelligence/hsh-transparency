@@ -63,7 +63,7 @@ A precision figure with no denominator is a claim. One with its population, its 
 | Format | Apache Parquet, 3 parts |
 | Size | 1.2 GB |
 | Release | `restatements-v1.5.1` (as-of watermark 2026-09-17) |
-| Cadence, observed | **7 releases between 2026-09-10 and 2026-09-17** — 7 days |
+| Cadence, observed | **6 releases between 2026-09-10 and 2026-09-17** — 7 days |
 | Cadence, committed | Stated in the commercial terms, not here. This page reports what has been published; what will be published on what schedule is a contractual commitment and is made there. |
 | This sample | 5,645 rows, published free for evaluation |
 
@@ -224,9 +224,9 @@ You can therefore check our coverage claims without us handing over the data the
 | `20-F` | 2,112 | *not stated* | 300 | 279 | 0 | 21 | **100.00%** | sampled — [98.64, 100.00] |
 | `40-F` | 290 | *not stated* | 290 | 282 | 0 | 8 | **100.00%** | census — every member examined |
 
-**`frame reachable` reads *not stated* for 7 of these strata.** This release's bound accuracy lines record a population and not a separately measured reachable frame, so we cannot tell you here how many of its rows hold a document the verifier can read. That is a gap in what this release bound — it is NOT a claim that population and reachable frame are the same number here. Releases cut after 2026-09-17 bind the frame on every line and this column reports it.
+`frame reachable` **reads *not stated* for 7 of these strata.** This release's bound accuracy lines record a population and not a separately measured reachable frame, so we cannot tell you here how many of its rows hold a document the verifier can read. That is a gap in what this release bound — it is NOT a claim that population and reachable frame are the same number here. Releases cut after 2026-09-17 bind the frame on every line and this column reports it.
 
-**`inconclusive` is examined and undecided, and it is EXCLUDED from the precision denominator rather than counted against it.** Across these strata that is **58 of 1,504 records examined** (3.9%). A precision of 100% on a stratum with inconclusives means every record that COULD be decided was confirmed — not that every record was. The column is here so you can see the size of what was set aside.
+`inconclusive` **is examined and undecided, and it is EXCLUDED from the precision denominator rather than counted against it.** Across these strata that is **58 of 1,504 records examined** (3.9%). A precision of 100% on a stratum with inconclusives means every record that COULD be decided was confirmed — not that every record was. The column is here so you can see the size of what was set aside.
 
 4 of these strata are reported as a **census**: every member examined, so there is no sampling risk and no interval is quoted. Quoting one would imply an inference nobody made. A census can still carry inconclusives: those members were examined and produced no verdict.
 
@@ -315,8 +315,12 @@ That is a different property from the **4 strata the coverage attestation report
 
 ## Licence and terms
 
-This sample is provided for **evaluation**. It is not redistributable and confers no rights to the full dataset. Commercial terms are agreed in writing before any delivery and are available from info@healingsunhaven.com. No pricing sheet, licence agreement or order form is cited here because none has been registered with this build — we name only what we can send you today.
+This sample is provided for **evaluation**. It is not redistributable and confers no rights to the full dataset. The pricing sheet ships beside these documents. The Master Data License Agreement and Order Form are held and sent on request from info@healingsunhaven.com. Each is cited by content hash, computed from the file itself at the moment it was registered, so you can confirm the copy you receive is the copy we published: Master Data License Agreement `df68fadbfacba877af9f201f093556b3142254dfaa6b17e2f49edbb13dc2a1ed` (sighted 2026-09-18); Order Form `cf05f9286f1335543910902baaf2c6383e34c6d5e579b45c98a57d1a8ec4a525` (sighted 2026-09-18); pricing sheet `2490c3d160d00c7de0d1baac7566ddb48a4d08f47de4859d7989ce1d294eabe5` (sighted 2026-09-18).
 
 **Contact:** info@healingsunhaven.com
 
-*Sample of `restatements-v1.5.1`, as-of watermark 2026-09-17 15:29:36. Generated 2026-09-18T09:40:29Z.*
+*Sample of `restatements-v1.5.1`, as-of watermark 2026-09-17 15:29:36. Generated 2026-09-18T17:44:54Z.*
+
+---
+
+© 2026 Healing Sun Haven LLC
