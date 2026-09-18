@@ -117,7 +117,7 @@
    "released_at": "2026-08-23 17:24:37",
    "retired": true,
    "retired_at": "2026-08-26 17:46:26",
-   "retired_reason": "SHIPPED A PLACEHOLDER DATE ON 100% OF ITS ROWS. All 149,220 records carry filed_at = 1970-01-01.",
+   "retired_reason": "SHIPPED A PLACEHOLDER DATE ON 100% OF ITS ROWS. All 149,220 records carry filed_at = 1970-01-01. Verified in the Parquet a buyer downloads with pyarrow, not only in the database.",
    "version": "v1.4.0"
   },
   {
@@ -229,7 +229,7 @@
    "released_at": "2026-09-10 07:39:41",
    "retired": true,
    "retired_at": "2026-09-11 08:49:13",
-   "retired_reason": "WITHDRAWN AS WRONG, NOT CAVEATED. MEASURED 2026-09-11. No customer holds this release. Four defects, all fixed at the cause; v1.1.0 is rebuilt and verified but NOT YET PUBLISHED, so superseded_by is deliberately empty rather than naming a release that does not exist. This row will be superseded when v1.1.0 publishes.\\n\\nDEFECT 1 - THE ONE THAT MAKES IT WRONG RATHER THAN LIMITED. `is_latest` was co",
+   "retired_reason": "WITHDRAWN AS WRONG, NOT CAVEATED. MEASURED 2026-09-11. No customer holds this release. Four defects, all fixed at the cause; v1.1.0 is rebuilt and verified but NOT YET PUBLISHED, so superseded_by is deliberately empty rather than naming a release that does not exist. This row will be superseded when v1.1.0 publishes. DEFECT 1 - THE ONE THAT MAKES IT WRONG RATHER THAN LIMITED. `is_latest` was co",
    "version": "v1.0.0"
   },
   {
