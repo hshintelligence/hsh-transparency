@@ -70,7 +70,7 @@ Five of the six checks need only the files in `sample/`. The one that does not â
 
 ## Documentation
 
-The datasheet, data dictionary, audit report, release history, schema stability note, product due diligence questionnaire, corrections policy, legal one-pager and errata & release history:
+The datasheet, data dictionary, audit report, release history, schema stability note, product due diligence questionnaire, corrections policy, legal one-pager, errata and pricing sheet:
 
     https://drive.google.com/drive/folders/1c3qzgAFHef1lyTfRYQi5gpqIHXbCyhAn?usp=sharing
 

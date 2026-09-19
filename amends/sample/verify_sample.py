@@ -38,9 +38,17 @@ WHAT IT CHECKS, and why each one matters:
          python3 verify_sample.py . --fingerprint KEY-FINGERPRINT.txt
          python3 verify_sample.py . --fingerprint <64-hex>
 
-     Without it, check 5 reports NOT CHECKED and says what is missing.
+     Without it, THIS check reports NOT CHECKED and says what is missing.
      It is not treated as a pass, because "I did not look" and "I looked
      and it matched" are different results.
+
+  6. The parquet's own rows hash to their payload_sha.
+     Checks 1 and 2 read the CSV. load_dataset() returns the PARQUET, so
+     this is the file most buyers actually hold. Check 4 proves its BYTES
+     are the ones the seal covers; this proves its ROWS, and that the
+     parquet and the CSV carry the same records. It needs pyarrow — without
+     it the check reports NOT CHECKED rather than quietly passing.
+
 
 A sample cannot prove COVERAGE — that the corpus figures describe the whole
 of it. See COVERAGE-ATTESTATION.json, signed with the same key.

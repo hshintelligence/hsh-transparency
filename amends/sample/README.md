@@ -31,7 +31,7 @@ configs:
 |---|---|
 | **Run the checks** | [Colab notebook](https://colab.research.google.com/github/hshintelligence/hsh-transparency/blob/main/amends/notebook/hsh-amends-verify-and-explore.ipynb) — verifies this sample against a second host, then explores it |
 | **Trust anchor** | [hshintelligence/hsh-transparency](https://github.com/hshintelligence/hsh-transparency/tree/main/amends) — the signing key, its fingerprint, and the signed record of every release |
-| **Documentation** | [Open the folder](https://drive.google.com/drive/folders/1c3qzgAFHef1lyTfRYQi5gpqIHXbCyhAn?usp=sharing) — the datasheet, data dictionary, audit report, release history, schema stability note, product due diligence questionnaire, corrections policy, legal one-pager and errata & release history |
+| **Documentation** | [Open the folder](https://drive.google.com/drive/folders/1c3qzgAFHef1lyTfRYQi5gpqIHXbCyhAn?usp=sharing) — the datasheet, data dictionary, audit report, release history, schema stability note, product due diligence questionnaire, corrections policy, legal one-pager, errata and pricing sheet |
 | **Who we are** | [hshintelligence.com](https://hshintelligence.com) |
 | **Licensing** | [info@healingsunhaven.com](mailto:info@healingsunhaven.com) |
 
@@ -319,7 +319,7 @@ This sample is provided for **evaluation**. It is not redistributable and confer
 
 **Contact:** info@healingsunhaven.com
 
-*Sample of `restatements-v1.5.1`, as-of watermark 2026-09-17 15:29:36. Generated 2026-09-19T03:52:10Z.*
+*Sample of `restatements-v1.5.1`, as-of watermark 2026-09-17 15:29:36. Generated 2026-09-19T05:18:22Z.*
 
 ---
 
