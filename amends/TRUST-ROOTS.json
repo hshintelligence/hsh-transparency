@@ -28,7 +28,7 @@
    "released_at": "2026-09-10 15:44:41",
    "retired": true,
    "retired_at": "2026-09-11 07:11:02",
-   "retired_reason": "WITHDRAWN FOR DUPLICATE RECORDS, BEFORE ANY CUSTOMER HELD IT. MEASURED 2026-09-11: 4,306,782 of 271,887,617 records (1.584%) are duplicates. NO REPLACEMENT EXISTS YET \u2014 v1.0.1 is being rebuilt now and this row will be superseded when it publishes; claiming a supersession that does not exist would be the same kind of false statement this withdrawal corrects.",
+   "retired_reason": "WITHDRAWN FOR DUPLICATE RECORDS, BEFORE ANY CUSTOMER HELD IT. MEASURED 2026-09-11: 4,306,782 of 271,887,617 records (1.584%) are duplicates. NO REPLACEMENT EXISTS YET \u2014 v1.0.1 is being rebuilt now and this row will be superseded when it publishes; claiming a supersession that does not exist would be the same kind of false statement this withdrawal corrects. WHY NO CHECK CAUGHT IT: each was true about something else.",
    "version": "v1.0.0"
   },
   {
@@ -45,7 +45,7 @@
    "released_at": "2026-09-10 21:00:05",
    "retired": true,
    "retired_at": "2026-09-11 07:11:02",
-   "retired_reason": "WITHDRAWN FOR DUPLICATE RECORDS, BEFORE ANY CUSTOMER HELD IT. MEASURED 2026-09-11: 4,192,143 of 302,770,015 records (1.385%) are duplicates. NO REPLACEMENT EXISTS YET \u2014 v1.0.1 is being rebuilt now and this row will be superseded when it publishes; claiming a supersession that does not exist would be the same kind of false statement this withdrawal corrects.",
+   "retired_reason": "WITHDRAWN FOR DUPLICATE RECORDS, BEFORE ANY CUSTOMER HELD IT. MEASURED 2026-09-11: 4,192,143 of 302,770,015 records (1.385%) are duplicates. NO REPLACEMENT EXISTS YET \u2014 v1.0.1 is being rebuilt now and this row will be superseded when it publishes; claiming a supersession that does not exist would be the same kind of false statement this withdrawal corrects. WHY NO CHECK CAUGHT IT: each was true about something else.",
    "version": "v1.0.0"
   },
   {
@@ -57,7 +57,7 @@
    "released_at": "2026-08-14 15:33:02",
    "retired": true,
    "retired_at": "2026-08-24 04:38:40",
-   "retired_reason": "23 of its 579 records (3.97%) FAIL the benchmark-contamination gate \u2014 82 findings against financebench, finqa-test, finqa-dev, convfinqa and tat-qa-test, tool ngram/2026-08-21T17:03:48Z. None of the 23 is present in hybrid_contexts-v1.4.0, so the successor is clean of them by construction.",
+   "retired_reason": "23 of its 579 records (3.97%) FAIL the benchmark-contamination gate \u2014 82 findings against financebench, finqa-test, finqa-dev, convfinqa and tat-qa-test, tool ngram/2026-08-21T17:03:48Z. None of the 23 is present in hybrid_contexts-v1.4.0, so the successor is clean of them by construction. Its recorded \\'0 rows measured 2026-08-20\\' baseline was a vacuous pass, not evidence of cleanliness. This release was published 2026-08-14 as the first pilot of the product, at 579 records against v1.4.0\\'s 149,220.",
    "version": "v1.0.0"
   },
   {
@@ -69,7 +69,7 @@
    "released_at": "2026-08-22 10:15:46",
    "retired": true,
    "retired_at": "2026-08-23 17:03:53",
-   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 150,816 context records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 3,293 records in this release that FAIL a quality gate \u2014 24 PII findings and the remainder benchmark contamination. Not withdrawn: th",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 150,816 context records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 3,293 records in this release that FAIL a quality gate \u2014 24 PII findings and the remainder benchmark contamination. Not withdrawn: the artefact and its Merkle root are unchanged and still verify the exact bytes published, so a buyer who downloaded this version can still prove what they received.",
    "version": "v1.1.0"
   },
   {
@@ -85,7 +85,7 @@
    "released_at": "2026-08-22 13:10:55",
    "retired": true,
    "retired_at": "2026-08-23 17:03:53",
-   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 150,816 context records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 3,293 records in this release that FAIL a quality gate \u2014 24 PII findings and the remainder benchmark contamination. Not withdrawn: th",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 150,816 context records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 3,293 records in this release that FAIL a quality gate \u2014 24 PII findings and the remainder benchmark contamination. Not withdrawn: the artefact and its Merkle root are unchanged and still verify the exact bytes published, so a buyer who downloaded this version can still prove what they received.",
    "version": "v1.2.0"
   },
   {
@@ -101,7 +101,7 @@
    "released_at": "2026-08-22 16:05:24",
    "retired": true,
    "retired_at": "2026-08-23 17:03:53",
-   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 150,816 context records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 3,293 records in this release that FAIL a quality gate \u2014 24 PII findings and the remainder benchmark contamination. Not withdrawn: th",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 150,816 context records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 3,293 records in this release that FAIL a quality gate \u2014 24 PII findings and the remainder benchmark contamination. Not withdrawn: the artefact and its Merkle root are unchanged and still verify the exact bytes published, so a buyer who downloaded this version can still prove what they received.",
    "version": "v1.3.0"
   },
   {
@@ -117,7 +117,7 @@
    "released_at": "2026-08-23 17:24:37",
    "retired": true,
    "retired_at": "2026-08-26 17:46:26",
-   "retired_reason": "SHIPPED A PLACEHOLDER DATE ON 100% OF ITS ROWS. All 149,220 records carry filed_at = 1970-01-01. Verified in the Parquet a buyer downloads with pyarrow, not only in the database.",
+   "retired_reason": "SHIPPED A PLACEHOLDER DATE ON 100% OF ITS ROWS. All 149,220 records carry filed_at = 1970-01-01. Verified in the Parquet a buyer downloads with pyarrow, not only in the database. `.get(default)` is the correct idiom for a field that may be absent and a model selects what a builder asked for. Nothing checked whether the model COULD have answered. That model\\'s own banner, about __silver_written_at, reads: \\'The column existed in Silver the whole time and this model dropped it, which is exactly why the defect was invisible: the watermark was present and unreachable.\\' filed_at was present and unreachable in the same SELECT, under that sentence.",
    "version": "v1.4.0"
   },
   {
@@ -165,7 +165,7 @@
    "released_at": "2026-08-14 15:15:19",
    "retired": true,
    "retired_at": "2026-08-24 04:30:44",
-   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_context",
+   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_contexts, the corpus it is derived FROM, was rebuilt four times.",
    "version": "v1.0.0"
   },
   {
@@ -177,7 +177,7 @@
    "released_at": "2026-08-22 10:19:44",
    "retired": true,
    "retired_at": "2026-08-24 04:30:45",
-   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_context",
+   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_contexts, the corpus it is derived FROM, was rebuilt four times.",
    "version": "v1.1.0"
   },
   {
@@ -193,7 +193,7 @@
    "released_at": "2026-08-22 13:09:01",
    "retired": true,
    "retired_at": "2026-08-24 04:30:45",
-   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_context",
+   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_contexts, the corpus it is derived FROM, was rebuilt four times.",
    "version": "v1.2.0"
   },
   {
@@ -209,7 +209,7 @@
    "released_at": "2026-08-22 16:02:49",
    "retired": true,
    "retired_at": "2026-08-24 04:30:45",
-   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_context",
+   "retired_reason": "RETIRED FOR ABANDONMENT, NOT FOR A DEFECT, and there is NO REPLACEMENT \u2014 this product will not be rebuilt. 659 of the 1,382 published records are no longer produced by the builder, and the builder itself is being removed from gold/release.BUILDERS. The product was generated by a paid LLM over 0.29% of the available contexts and has been frozen at 1,382 records since 2026-08-14 while hybrid_contexts, the corpus it is derived FROM, was rebuilt four times.",
    "version": "v1.3.0"
   },
   {
@@ -229,7 +229,7 @@
    "released_at": "2026-09-10 07:39:41",
    "retired": true,
    "retired_at": "2026-09-11 08:49:13",
-   "retired_reason": "WITHDRAWN AS WRONG, NOT CAVEATED. MEASURED 2026-09-11. No customer holds this release. Four defects, all fixed at the cause; v1.1.0 is rebuilt and verified but NOT YET PUBLISHED, so superseded_by is deliberately empty rather than naming a release that does not exist. This row will be superseded when v1.1.0 publishes. DEFECT 1 - THE ONE THAT MAKES IT WRONG RATHER THAN LIMITED. `is_latest` was co",
+   "retired_reason": "WITHDRAWN AS WRONG, NOT CAVEATED. MEASURED 2026-09-11. No customer holds this release. Four defects, all fixed at the cause; v1.1.0 is rebuilt and verified but NOT YET PUBLISHED. This row will be superseded when v1.1.0 publishes. DEFECT 1 - THE ONE THAT MAKES IT WRONG RATHER THAN LIMITED. 3,982,448 records were marked is_latest = 0 by nothing at all: 12,873,750 of 15,353,785 records (84.0%) sat in a chain containing no amendment, across 860,780 such chains.",
    "version": "v1.0.0"
   },
   {
@@ -294,7 +294,7 @@
    "released_at": "2026-09-11 18:18:06",
    "retired": true,
    "retired_at": "2026-09-12 12:06:59",
-   "retired_reason": "A PHANTOM RELEASE: LIVE IN THE LEDGER, WITH NOTHING PUBLISHED.",
+   "retired_reason": "NO DATA IS LOST AND NOTHING IS WITHDRAWN FROM A BUYER: nothing was ever published under this id and no customer held it. restatements-v1.2.0, published 2026-09-12 09:06:17, is the real release and carries the cik10 join column this one predates.",
    "version": "v1.1.0"
   },
   {
@@ -799,7 +799,7 @@
    "released_at": "2026-08-14 15:33:06",
    "retired": true,
    "retired_at": "2026-09-02 08:46:23",
-   "retired_reason": "UNREPRODUCIBLE: the ledger row carries as_of = 1970-01-01, so the build watermark was never recorded, and it cannot be recovered.",
+   "retired_reason": "UNREPRODUCIBLE: The Silver history this was built from no longer exists, so the corpus cannot be asked for again by watermark and a rebuild cannot be shown to reproduce it. 65 records, superseded by sections-v1.4.0 at 14,685. The parquet, its hashes and its Merkle leaf are UNTOUCHED and still verify the exact bytes any buyer downloaded; what is withdrawn is the claim that the version is fit to rely on.",
    "version": "v1.0.0"
   },
   {
@@ -811,7 +811,7 @@
    "released_at": "2026-08-22 10:13:41",
    "retired": true,
    "retired_at": "2026-08-23 17:03:53",
-   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 14,090 section records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 460 records in this release that FAIL a quality gate \u2014 47 PII findings and the remainder benchmark contamination. Not withdrawn: the a",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 14,090 section records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 460 records in this release that FAIL a quality gate \u2014 47 PII findings and the remainder benchmark contamination. Not withdrawn: the artefact and its Merkle root are unchanged and still verify the exact bytes published, so a buyer who downloaded this version can still prove what they received.",
    "version": "v1.1.0"
   },
   {
@@ -827,7 +827,7 @@
    "released_at": "2026-08-22 13:09:34",
    "retired": true,
    "retired_at": "2026-08-23 17:03:53",
-   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 14,090 section records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 460 records in this release that FAIL a quality gate \u2014 47 PII findings and the remainder benchmark contamination. Not withdrawn: the a",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 14,090 section records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 460 records in this release that FAIL a quality gate \u2014 47 PII findings and the remainder benchmark contamination. Not withdrawn: the artefact and its Merkle root are unchanged and still verify the exact bytes published, so a buyer who downloaded this version can still prove what they received.",
    "version": "v1.2.0"
   },
   {
@@ -843,7 +843,7 @@
    "released_at": "2026-08-22 16:03:38",
    "retired": true,
    "retired_at": "2026-08-23 17:03:53",
-   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 14,090 section records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 460 records in this release that FAIL a quality gate \u2014 47 PII findings and the remainder benchmark contamination. Not withdrawn: the a",
+   "retired_reason": "Published under a NEGATIVE eligibility join: a record was eligible unless it appeared in the quality-gate failure set, so 14,090 section records that had never been scanned were eligible BY CONSTRUCTION and \\'unknown\\' shipped as \\'clean\\'. The completed scan found 460 records in this release that FAIL a quality gate \u2014 47 PII findings and the remainder benchmark contamination. Not withdrawn: the artefact and its Merkle root are unchanged and still verify the exact bytes published, so a buyer who downloaded this version can still prove what they received.",
    "version": "v1.3.0"
   },
   {
@@ -871,7 +871,7 @@
    "released_at": "2026-08-14 15:33:12",
    "retired": true,
    "retired_at": "2026-08-26 08:51:14",
-   "retired_reason": "438 of 14,505 rows (3.020%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload where the value should read a real unit. MEASURED 2026-08-26 by comparing every record_uid this release shares with the live table_facts-v1.4.0: 438 of 14,505 differ, and every one of them differs on the `unit` key alone \u2014 uref_1695913440 -> USD (347), uref_2104634341 -> Shares (53), uref_2040530268 -",
+   "retired_reason": "438 of 14,505 rows (3.020%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload where the value should read a real unit. MEASURED 2026-08-26 by comparing every record_uid this release shares with the live table_facts-v1.4.0: 438 of 14,505 differ, and every one of them differs on the `unit` key alone \u2014 uref_1695913440 -> USD (347), uref_2104634341 -> Shares (53), uref_2040530268 -> USDPShares (20), uref_1155227959 -> Pure (18).",
    "version": "v1.0.0"
   },
   {
@@ -883,7 +883,7 @@
    "released_at": "2026-08-22 12:02:28",
    "retired": true,
    "retired_at": "2026-08-24 05:51:01",
-   "retired_reason": "113,342 of 4,738,072 rows (2.392%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload \u2014 `Unit12`, `Unit1`, `uref_1534111966` and 1,155 other opaque identifiers \u2014 where the value should read USD, Shares, Pure or USDPShares. A buyer filtering `unit = \\'USD\\'` silently loses those rows, and a buyer reading `unit` gets a token that means nothing outside one filing\\'s XBRL document.",
+   "retired_reason": "113,342 of 4,738,072 rows (2.392%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload \u2014 `Unit12`, `Unit1`, `uref_1534111966` and 1,155 other opaque identifiers \u2014 where the value should read USD, Shares, Pure or USDPShares. A buyer filtering `unit = \\'USD\\'` silently loses those rows, and a buyer reading `unit` gets a token that means nothing outside one filing\\'s XBRL document. a buyer sees USD\\'; it was implemented for exactly one filing toolchain\\'s spelling and everything else fell through and was written verbatim.",
    "version": "v1.1.0"
   },
   {
@@ -899,7 +899,7 @@
    "released_at": "2026-08-22 13:26:47",
    "retired": true,
    "retired_at": "2026-08-24 05:51:02",
-   "retired_reason": "113,342 of 4,738,072 rows (2.392%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload \u2014 `Unit12`, `Unit1`, `uref_1534111966` and 1,155 other opaque identifiers \u2014 where the value should read USD, Shares, Pure or USDPShares. A buyer filtering `unit = \\'USD\\'` silently loses those rows, and a buyer reading `unit` gets a token that means nothing outside one filing\\'s XBRL document.",
+   "retired_reason": "113,342 of 4,738,072 rows (2.392%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload \u2014 `Unit12`, `Unit1`, `uref_1534111966` and 1,155 other opaque identifiers \u2014 where the value should read USD, Shares, Pure or USDPShares. A buyer filtering `unit = \\'USD\\'` silently loses those rows, and a buyer reading `unit` gets a token that means nothing outside one filing\\'s XBRL document. a buyer sees USD\\'; it was implemented for exactly one filing toolchain\\'s spelling and everything else fell through and was written verbatim.",
    "version": "v1.2.0"
   },
   {
@@ -915,7 +915,7 @@
    "released_at": "2026-08-22 16:20:59",
    "retired": true,
    "retired_at": "2026-08-24 05:51:02",
-   "retired_reason": "113,342 of 4,738,072 rows (2.392%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload \u2014 `Unit12`, `Unit1`, `uref_1534111966` and 1,155 other opaque identifiers \u2014 where the value should read USD, Shares, Pure or USDPShares. A buyer filtering `unit = \\'USD\\'` silently loses those rows, and a buyer reading `unit` gets a token that means nothing outside one filing\\'s XBRL document.",
+   "retired_reason": "113,342 of 4,738,072 rows (2.392%) carry an UNRESOLVED XBRL unitRef in the `unit` field of their payload \u2014 `Unit12`, `Unit1`, `uref_1534111966` and 1,155 other opaque identifiers \u2014 where the value should read USD, Shares, Pure or USDPShares. A buyer filtering `unit = \\'USD\\'` silently loses those rows, and a buyer reading `unit` gets a token that means nothing outside one filing\\'s XBRL document. a buyer sees USD\\'; it was implemented for exactly one filing toolchain\\'s spelling and everything else fell through and was written verbatim.",
    "version": "v1.3.0"
   },
   {
@@ -931,7 +931,7 @@
    "released_at": "2026-08-24 04:50:30",
    "retired": true,
    "retired_at": "2026-08-27 20:16:56",
-   "retired_reason": "SHIPPED THE unitRef AS THE UNIT. The `unit` column carried the filer\\'s own document-local XBRL unitRef rather than the unit of measure, so a buyer filtering unit=\\'USD\\' on this release received 787,706 of 3,899,578 dollar-denominated rows \u2014 FOUR ROWS IN FIVE SILENTLY EXCLUDED. The bytes hold three spellings of one unit: usd 2,402,801, USD 787,706, U_USD 709,071, and 6,984 distinct unit strings e",
+   "retired_reason": "SHIPPED THE unitRef AS THE UNIT. The `unit` column carried the filer\\'s own document-local XBRL unitRef rather than the unit of measure, so a buyer filtering unit=\\'USD\\' on this release received 787,706 of 3,899,578 dollar-denominated rows \u2014 FOUR ROWS IN FIVE SILENTLY EXCLUDED. The bytes hold three spellings of one unit: usd 2,402,801, USD 787,706, U_USD 709,071, and 6,984 distinct unit strings existed across Silver.",
    "version": "v1.4.0"
   },
   {
@@ -951,7 +951,7 @@
    "released_at": "2026-08-27 20:06:40",
    "retired": true,
    "retired_at": "2026-08-27 23:05:28",
-   "retired_reason": "SHIPPED A DOCUMENT-LOCAL IDENTIFIER AS THE UNIT ON 925 ROWS, and it is the SAME defect this version was published to fix.",
+   "retired_reason": "SHIPPED A DOCUMENT-LOCAL IDENTIFIER AS THE UNIT ON 925 ROWS, and it is the SAME defect this version was published to fix. The ratchet control written to catch exactly this missed all of it, because it has a floor of 500 rows per string and not one of the residual strings reached 100 \u2014 a per-item floor cannot see a distributed residue. test_dm6 measured the consequence for this release precisely: 925 of 4,789,416 payloads (0.0193%) no longer reproduce from the models.",
    "version": "v1.5.0"
   },
   {
@@ -971,7 +971,7 @@
    "released_at": "2026-08-27 23:04:49",
    "retired": true,
    "retired_at": "2026-08-28 05:00:10",
-   "retired_reason": "SHIPPED context_ref AS AN INERT POINTER. Every payload carried a `context_ref` \u2014 a document-local identifier \u2014 and nothing it referred to. An XBRL context carries a period AND the dimensional qualifiers saying which slice of the business a number describes; we extracted the period and discarded the qualifiers. So a consolidated figure and its own segment decomposition were the same concept, over t",
+   "retired_reason": "SHIPPED context_ref AS AN INERT POINTER. Every payload carried a `context_ref` \u2014 a document-local identifier \u2014 and nothing it referred to. An XBRL context carries a period AND the dimensional qualifiers saying which slice of the business a number describes; we extracted the period and discarded the qualifiers. So a consolidated figure and its own segment decomposition were the same concept, over the same period, in the same filing, separable only by an identifier that means nothing outside that document.",
    "version": "v1.6.0"
   },
   {
@@ -1003,7 +1003,7 @@
    "released_at": "2026-08-14 15:33:18",
    "retired": true,
    "retired_at": "2026-08-28 04:43:00",
-   "retired_reason": "CARRIES A LICENCE TAG WE KNOW IS WRONG. This release is tagged \\'public-domain-derived\\'. Its content is identical to taxonomy-v1.1.0, v1.2.0 and v1.3.0, all of which are correctly tagged \\'fasb-taxonomy-terms\\' \u2014 13,429 of its 14,760 rows (91.0%) carry a prose `definition` written by FASB, which is not a United States government work and is not public domain. The tag was found wrong, disclosed in",
+   "retired_reason": "CARRIES A LICENCE TAG WE KNOW IS WRONG. This release is tagged \\'public-domain-derived\\'. Its content is identical to taxonomy-v1.1.0, v1.2.0 and v1.3.0, all of which are correctly tagged \\'fasb-taxonomy-terms\\' \u2014 13,429 of its 14,760 rows (91.0%) carry a prose `definition` written by FASB, which is not a United States government work and is not public domain. But a knowingly-wrong licence claim on a LIVE release is not a resting state: a buyer reading it would conclude they may redistribute FASB\\'s prose freely, and that question is open (see docs/FASB_REDISTRIBUTION_DECISION.md).",
    "version": "v1.0.0"
   },
   {
@@ -1015,7 +1015,7 @@
    "released_at": "2026-08-14 15:34:47",
    "retired": true,
    "retired_at": "2026-08-28 04:43:00",
-   "retired_reason": "CARRIES A LICENCE TAG WE KNOW IS WRONG. This release is tagged \\'public-domain-derived\\'. Its content is identical to taxonomy-v1.1.0, v1.2.0 and v1.3.0, all of which are correctly tagged \\'fasb-taxonomy-terms\\' \u2014 13,429 of its 14,760 rows (91.0%) carry a prose `definition` written by FASB, which is not a United States government work and is not public domain. The tag was found wrong, disclosed in",
+   "retired_reason": "CARRIES A LICENCE TAG WE KNOW IS WRONG. This release is tagged \\'public-domain-derived\\'. Its content is identical to taxonomy-v1.1.0, v1.2.0 and v1.3.0, all of which are correctly tagged \\'fasb-taxonomy-terms\\' \u2014 13,429 of its 14,760 rows (91.0%) carry a prose `definition` written by FASB, which is not a United States government work and is not public domain. But a knowingly-wrong licence claim on a LIVE release is not a resting state: a buyer reading it would conclude they may redistribute FASB\\'s prose freely, and that question is open (see docs/FASB_REDISTRIBUTION_DECISION.md).",
    "version": "v1.0.0"
   },
   {

@@ -319,7 +319,7 @@ This sample is provided for **evaluation**. It is not redistributable and confer
 
 **Contact:** info@healingsunhaven.com
 
-*Sample of `restatements-v1.5.1`, as-of watermark 2026-09-17 15:29:36. Generated 2026-09-18T21:32:00Z.*
+*Sample of `restatements-v1.5.1`, as-of watermark 2026-09-17 15:29:36. Generated 2026-09-19T03:52:10Z.*
 
 ---
 
