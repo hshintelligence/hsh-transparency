@@ -118,7 +118,7 @@ What the two hosts DO protect is the data. If the dataset host served you an alt
 | `accession` | `VARCHAR` | SEC's accession number for the filing, canonical (digits only, no dashes). With `cik` it identifies a filing uniquely |
 | `company_name` | `VARCHAR` | The filer's name as SEC recorded it on this filing |
 | `filed_at` | `VARCHAR` | The date SEC assigned to the filing. NOT the moment it became public — see `first_seen_at` in the payload |
-| `pipeline_sha` | `VARCHAR` | The commit whose code produced this row |
+| `pipeline_sha` | `VARCHAR` | An opaque identifier for the build that produced this row. Comparable, not resolvable — see below |
 | `source_url` | `VARCHAR` | The SEC EDGAR URL this row was derived from. Every row resolves; the audit checks the template against its own ids |
 | `licence` | `VARCHAR` | The licence this row is published under |
 | `crawler_version` | `VARCHAR` | Version of the acquisition code |
@@ -319,7 +319,7 @@ This sample is provided for **evaluation**. It is not redistributable and confer
 
 **Contact:** info@healingsunhaven.com
 
-*Sample of `restatements-v1.5.1`, as-of watermark 2026-09-17 15:29:36. Generated 2026-09-18T18:16:53Z.*
+*Sample of `restatements-v1.5.1`, as-of watermark 2026-09-17 15:29:36. Generated 2026-09-18T21:32:00Z.*
 
 ---
 
