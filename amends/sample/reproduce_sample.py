@@ -3,7 +3,7 @@
 
     python3 reproduce_sample.py /path/to/release/parquet/dir
 
-The sample is a deterministic draw from `restatements-v1.5.1`. This script replays it
+The sample is a deterministic draw from `restatements-v1.6.0`. This script replays it
 from SAMPLE-COMPOSITION.json — the same rules, the same ordering, the
 same column list — and compares what it gets to the files in this
 directory. It is the executable form of the sentence in README.md.
@@ -27,7 +27,15 @@ import duckdb, hashlib, json, os, sys, tempfile
 d = os.path.dirname(os.path.abspath(__file__))
 rel = sys.argv[1] if len(sys.argv) > 1 else "."
 comp = json.load(open(os.path.join(d, "SAMPLE-COMPOSITION.json")))
-glob = os.path.join(rel, "restatements-v1.5.1-*.parquet")
+# NAME THE SPLIT FILES, DO NOT WILDCARD THE RELEASE ID. A release id can
+# be a PREFIX of another release id, so a wildcard on the id also matches
+# a neighbouring build sitting in the same directory, and every row is
+# read twice. Measured 2026-09-23 on a 15,392,754-row release: a wildcard
+# read 30,785,508 rows, because a second build was beside it.
+files = [f for f in (os.path.join(rel, "restatements-v1.6.0-%s.parquet" % _s)
+                     for _s in ("train", "validation", "test", "reference"))
+         if os.path.exists(f)]
+assert files, "no parquet files for restatements-v1.6.0 in %s" % rel
 
 con = duckdb.connect()
 con.execute("SET memory_limit='5GB'")
@@ -42,10 +50,10 @@ con.execute(f"""CREATE VIEW rel AS SELECT *,
             json_extract_string(payload,'$.base_form') AS bf,
             json_extract_string(payload,'$.amends_identity') AS chain,
             CAST(substr(CAST(filed_at AS VARCHAR), 1, 4) AS INT) AS yr
-        FROM read_parquet('{glob}')""")
+        FROM read_parquet({files})""")
 
 n_rel = con.execute("SELECT count(*) FROM rel").fetchone()[0]
-print(f"release      {n_rel:,} rows from {glob}")
+print(f"release      {n_rel:,} rows from {len(files)} file(s)")
 if n_rel != comp["release_rows"]:
     print(f"  !! the release holds {n_rel:,} rows; this sample was drawn "
           f"from {comp['release_rows']:,}. Point at the right release.")

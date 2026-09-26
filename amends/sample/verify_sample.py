@@ -14,7 +14,7 @@ WHAT IT CHECKS, and why each one matters:
 
   2. Every record's payload hashes to its payload_sha.
      This is the row-level claim. It is the SAME check, byte for byte, that
-     applies to the full 15.3-million-row product.
+     applies to every row of the full product.
 
   3. The manifest's signature verifies against the published key.
      The host that served you these files cannot forge this. That is the
@@ -50,8 +50,9 @@ WHAT IT CHECKS, and why each one matters:
      it the check reports NOT CHECKED rather than quietly passing.
 
 
-A sample cannot prove COVERAGE — that the corpus figures describe the whole
-of it. See COVERAGE-ATTESTATION.json, signed with the same key.
+A sample cannot prove what the corpus figures say about the whole of it.
+The per-stratum precision, with the populations it was measured over, is in
+COVERAGE-ATTESTATION.json, signed with the same key.
 """
 import hashlib
 import json

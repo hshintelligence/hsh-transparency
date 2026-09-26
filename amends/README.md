@@ -15,7 +15,8 @@ It sits one level inside the HSH Intelligence transparency log, which
 publishes a daily Merkle root over the SEC EDGAR corpus. That is a separate
 guarantee about a different artefact and the README above explains it. The
 two share a repository because they share the one property either needs:
-append-only, public, and not the host that served you the data.
+public, with a history anyone can inspect, and not the host that served you
+the data.
 
 ## Why a second copy of the sample is here
 
@@ -55,7 +56,7 @@ delivered.
 
 **That is not the `MANIFEST.txt` in `sample/`.** There are two manifests
 and they describe different artefacts: one covers the full product, the
-other covers the 5,645-row sample. They have different hashes,
+other covers the 5,076-row sample. They have different hashes,
 they are signed separately, and comparing the sample's manifest to a
 release's `manifest_sha` will not match — correctly. Only the product's
 manifest is the one `TRUST-ROOTS.json` names.
