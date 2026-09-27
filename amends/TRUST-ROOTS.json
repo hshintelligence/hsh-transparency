@@ -230,7 +230,7 @@
    "released_at": "2026-09-10 07:39:41",
    "retired": true,
    "retired_at": "2026-09-11 08:49:13",
-   "retired_reason": "WITHDRAWN AS WRONG, NOT CAVEATED. MEASURED 2026-09-11. No customer holds this release. Four defects, all fixed at the cause; v1.1.0 is rebuilt and verified but NOT YET PUBLISHED. This row will be superseded when v1.1.0 publishes. DEFECT 1 - THE ONE THAT MAKES IT WRONG RATHER THAN LIMITED. 3,982,448 records were marked is_latest = 0 by nothing at all: 12,873,750 of 15,353,785 records (84.0%) sat in a chain containing no amendment, across 860,780 such chains.",
+   "retired_reason": "WITHDRAWN AS WRONG, NOT CAVEATED. MEASURED 2026-09-11. No customer holds this release. Four defects, all fixed at the cause; The corrected rebuild was published as restatements-v1.2.0 on 2026-09-12 (restatements-v1.1.0 was withdrawn before it published anything). DEFECT 1 - THE ONE THAT MAKES IT WRONG RATHER THAN LIMITED. 3,982,448 records were marked is_latest = 0 by nothing at all: 12,873,750 of 15,353,785 records (84.0%) sat in a chain containing no amendment, across 860,780 such chains.",
    "version": "v1.0.0"
   },
   {
@@ -1275,6 +1275,15 @@
    "superseded_by": "Nothing. NO PUBLISHED FILE WAS EDITED. This anchor is signed byte-for-byte and the README hands a reader the command that verifies it, so editing a published copy would make that command fail for anyone who already holds one \u2014 and would break the one promise this document exists to keep. The correction is at the source; the next anchor is a new artefact with its own signature, and every earlier one still verifies exactly as published.",
    "what": "The retirement reason carried on all four qa_pairs releases contained one clause describing HOW the product had been generated: the vendor class of the generator used, and the fraction of the source corpus that method happened to cover. It is removed from the ledger, so every anchor signed from here on omits it.",
    "why_superseded": "A retirement tells a buyer what was withdrawn and why it will not be rebuilt. Those facts are unchanged and complete without it: 659 of the 1,382 published records are no longer produced, the product has been frozen at 1,382 records since 2026-08-14, and the corpus it derives from was rebuilt four times underneath it. What was removed described our own method, which is not a buyer's business and is a good deal of use to a competitor. A buyer is owed how to check us and what checked them; they are not owed how we built it."
+  },
+  {
+   "at": "2026-09-26 19:40 UTC",
+   "authorised_by": "HSH Intelligence, 2026-09-26.",
+   "event": "CORRECTED AT SOURCE \u2014 NO PUBLISHED BYTE CHANGED",
+   "reached_a_counterparty": "restatements-v1.0.0 was withdrawn on 2026-09-11. This entry makes no claim about who holds a copy. The earlier wording is PRESENT IN EVERY COPY OF THIS FILE PUBLISHED BEFORE THIS ENTRY, and those bytes are deliberately unchanged.",
+   "superseded_by": "Nothing. NO PUBLISHED FILE WAS EDITED. Every earlier anchor still verifies exactly as published; the correction is at the source, and the next anchor is a new artefact with its own signature.",
+   "what": "The withdrawal reason for restatements-v1.0.0 described its corrected rebuild as not yet published and left superseded_by empty until it was. That rebuild was published as restatements-v1.2.0 on 2026-09-12. The reason in the ledger now says so and superseded_by names restatements-v1.2.0, so every anchor signed from here on carries both. Nothing else in the reason changed, and the withdrawal date is unchanged.",
+   "why_superseded": "A withdrawal reason that points forward to an event that has since happened reads as current and is not: the same file already recorded that restatements-v1.1.0 published nothing and that restatements-v1.2.0 was the first corrected release, so the anchor contradicted itself."
   }
  ],
  "what_this_is": "The published record of every HSH Intelligence dataset release: what was published, what it hashes to, what was retired and why. Signed, and independent of whichever host served you the data."
