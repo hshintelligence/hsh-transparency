@@ -1,6 +1,7 @@
 ---
 license: other
 license_name: hsh-commercial-sample
+license_link: LICENSE
 pretty_name: HSH Amends — sample
 language:
   - en
@@ -299,6 +300,7 @@ That is a different property from the **2 strata the coverage attestation report
 
 | file | what |
 |---|---|
+| `LICENSE` | the evaluation terms, as our legal document states them |
 | `hsh-amends-sample.parquet` | the real 19-column schema |
 | `hsh-amends-sample.csv` | the same rows as CSV |
 | `hsh-amends-sample-flat.csv` | `payload` exploded into columns, a convenience view and not part of the schema |
@@ -316,7 +318,7 @@ This sample is provided for **evaluation**. It is not redistributable and confer
 
 **Contact:** info@healingsunhaven.com
 
-*Sample of `restatements-v1.6.0`, as-of watermark 2026-09-26 01:08:51. Generated 2026-09-26T20:01:23Z.*
+*Sample of `restatements-v1.6.0`, as-of watermark 2026-09-26 01:08:51. Generated 2026-09-26T21:00:46Z.*
 
 ---
 
