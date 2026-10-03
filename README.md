@@ -97,7 +97,7 @@ join(a, b)    = sha256(b'\x01' + bytes.fromhex(a) + bytes.fromhex(b))
 | algorithm | days |
 |---|---|
 | `sha256-carry-v1` | 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-16, 2026-08-20, 2026-08-21 |
-| `sha256-rfc6962-v2` | 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-28, 2026-08-29, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-13, 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-29, 2026-09-30, 2026-10-01 |
+| `sha256-rfc6962-v2` | 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-28, 2026-08-29, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-13, 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-29, 2026-09-30, 2026-10-01, 2026-10-02 |
 
 `tree_depth` in the table below counts levels **including the leaves**: 23 leaves is depth 6, 5,329 is depth 14. It is informational — the proof path length is what a verifier uses — and it is stated here so it is not one more thing to guess. For `sha256-rfc6962-v2` the tree is not built level by level and the figure is recorded as the recursion depth.
 
@@ -143,6 +143,7 @@ The change was made on 2026-08-23. Roots published before it are `sha256-carry-v
 | 2026-09-29 | 1,254 | 12 | `sha256-rfc6962-v2` | `0859ea192604afcaed165fd21a2debcac21920d8f94e2e12f7d076a64a93282e` |
 | 2026-09-30 | 1,295 | 12 | `sha256-rfc6962-v2` | `4f88785a18fcf81b1069494de09861117cb067145d2b2d6ae7f8773404a7ee19` |
 | 2026-10-01 | 1,259 | 12 | `sha256-rfc6962-v2` | `296fdd0822bc419bf6a42c8325fc0a0a41b4b655b906acc53f52be97f0e5383c` |
+| 2026-10-02 | 1,139 | 12 | `sha256-rfc6962-v2` | `6e887bf7f84e47f03debf5f77907d025c868608734e2605f287220d623207894` |
 
 ## Days with no root
 
@@ -173,4 +174,4 @@ A day is only eligible for a root once it has closed. The current day will appea
 * **It does not cover records we never ingested.** A day with no root above is a day nothing was admitted, not a day something was hidden.
 * **The commits here are not cryptographically signed.** The timestamp is GitHub's, which is a third party, and that is the property this log needs. Signing would upgrade "GitHub says this date" to "HSH attested this date"; it is not in place yet and this sentence will be removed when it is.
 
-_Generated 2026-10-02T21:54:14.920067+00:00_
+_Generated 2026-10-03T03:54:20.781999+00:00_
