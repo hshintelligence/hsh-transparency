@@ -97,7 +97,7 @@ join(a, b)    = sha256(b'\x01' + bytes.fromhex(a) + bytes.fromhex(b))
 | algorithm | days |
 |---|---|
 | `sha256-carry-v1` | 2026-08-13, 2026-08-14, 2026-08-15, 2026-08-16, 2026-08-20, 2026-08-21 |
-| `sha256-rfc6962-v2` | 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-28, 2026-08-29, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-13, 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-29, 2026-09-30, 2026-10-01, 2026-10-02, 2026-10-03, 2026-10-06, 2026-10-07, 2026-10-08, 2026-10-09, 2026-10-10 |
+| `sha256-rfc6962-v2` | 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-28, 2026-08-29, 2026-09-01, 2026-09-02, 2026-09-03, 2026-09-04, 2026-09-05, 2026-09-06, 2026-09-07, 2026-09-09, 2026-09-10, 2026-09-11, 2026-09-13, 2026-09-14, 2026-09-15, 2026-09-16, 2026-09-17, 2026-09-18, 2026-09-19, 2026-09-22, 2026-09-23, 2026-09-24, 2026-09-25, 2026-09-26, 2026-09-29, 2026-09-30, 2026-10-01, 2026-10-02, 2026-10-03, 2026-10-06, 2026-10-07, 2026-10-08, 2026-10-09, 2026-10-10, 2026-10-14 |
 
 `tree_depth` in the table below counts levels **including the leaves**: 23 leaves is depth 6, 5,329 is depth 14. It is informational — the proof path length is what a verifier uses — and it is stated here so it is not one more thing to guess. For `sha256-rfc6962-v2` the tree is not built level by level and the figure is recorded as the recursion depth.
 
@@ -150,6 +150,7 @@ The change was made on 2026-08-23. Roots published before it are `sha256-carry-v
 | 2026-10-08 | 1,348 | 12 | `sha256-rfc6962-v2` | `52163c05abebd67dbd1c492a2ee4fc0c7e59a5fb9d97456f14ca4e46eba2b0e3` |
 | 2026-10-09 | 1,309 | 12 | `sha256-rfc6962-v2` | `5404837b39160f81ac3ff948aee9a5ebefd7a9437d5ec194b7d84f91bf764138` |
 | 2026-10-10 | 1,229 | 12 | `sha256-rfc6962-v2` | `f1b92f2f798706fa370eec4c768ddf4f8b97b62843cc8f8e388c5704094837c5` |
+| 2026-10-14 | 1,879 | 12 | `sha256-rfc6962-v2` | `ad0fce4fc8f83eaa1ea74140b46af683243afd6c9fecefa34334282bbeb281e4` |
 
 ## Days with no root
 
@@ -173,6 +174,9 @@ Listed explicitly rather than omitted. A log with unexplained gaps reads as conc
 | 2026-09-28 | 0 | no records were ingested on this day |
 | 2026-10-04 | 0 | no records were ingested on this day |
 | 2026-10-05 | 0 | no records were ingested on this day |
+| 2026-10-11 | 0 | no records were ingested on this day |
+| 2026-10-12 | 0 | no records were ingested on this day |
+| 2026-10-13 | 0 | no records were ingested on this day |
 
 A day is only eligible for a root once it has closed. The current day will appear here after it does; a root published over a batch that can still grow would be wrong by the next record admitted.
 
@@ -182,4 +186,4 @@ A day is only eligible for a root once it has closed. The current day will appea
 * **It does not cover records we never ingested.** A day with no root above is a day nothing was admitted, not a day something was hidden.
 * **The commits here are not cryptographically signed.** The timestamp is GitHub's, which is a third party, and that is the property this log needs. Signing would upgrade "GitHub says this date" to "HSH attested this date"; it is not in place yet and this sentence will be removed when it is.
 
-_Generated 2026-10-14T21:56:39.768442+00:00_
+_Generated 2026-10-15T03:56:31.751591+00:00_
