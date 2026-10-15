@@ -186,4 +186,4 @@ A day is only eligible for a root once it has closed. The current day will appea
 * **It does not cover records we never ingested.** A day with no root above is a day nothing was admitted, not a day something was hidden.
 * **The commits here are not cryptographically signed.** The timestamp is GitHub's, which is a third party, and that is the property this log needs. Signing would upgrade "GitHub says this date" to "HSH attested this date"; it is not in place yet and this sentence will be removed when it is.
 
-_Generated 2026-10-15T15:55:02.646794+00:00_
+_Generated 2026-10-15T21:55:02.556665+00:00_
